@@ -14,8 +14,8 @@ class MainMenuVC: UIViewController {
     @IBOutlet weak var rateButton: UIButton!
     
     override func viewDidLoad() {
-        nameTextField.delegate = self
         super.viewDidLoad()
+        nameTextField.delegate = self
     }
 
     @IBAction func newGameButtonTapped(_ sender: UIButton) {
