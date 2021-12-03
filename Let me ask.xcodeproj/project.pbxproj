@@ -16,7 +16,14 @@
 		463D87EF2756B1940025922A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87EE2756B1940025922A /* Question.swift */; };
 		463D87F32756B2EB0025922A /* QuestionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87F22756B2EB0025922A /* QuestionStorage.swift */; };
 		463D87F82756B50F0025922A /* RateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87F72756B50F0025922A /* RateVC.swift */; };
-		463D87FA2756B5600025922A /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87F92756B5600025922A /* QuestionVC.swift */; };
+		463D87FA2756B5600025922A /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87F92756B5600025922A /* GameVC.swift */; };
+		463D87FD2757DABA0025922A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87FC2757DAB90025922A /* Game.swift */; };
+		463D87FF2757DB2B0025922A /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87FE2757DB2B0025922A /* GameSession.swift */; };
+		463D8801275A36320025922A /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D8800275A36320025922A /* Record.swift */; };
+		463D8803275A44AC0025922A /* GameCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D8802275A44AC0025922A /* GameCaretaker.swift */; };
+		463D8807275A52520025922A /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D8805275A52520025922A /* RateTableViewCell.swift */; };
+		463D8808275A52520025922A /* RateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463D8806275A52520025922A /* RateTableViewCell.xib */; };
+		463D880B275A5E8D0025922A /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D880A275A5E8D0025922A /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +38,14 @@
 		463D87EE2756B1940025922A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		463D87F22756B2EB0025922A /* QuestionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStorage.swift; sourceTree = "<group>"; };
 		463D87F72756B50F0025922A /* RateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateVC.swift; sourceTree = "<group>"; };
-		463D87F92756B5600025922A /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
+		463D87F92756B5600025922A /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		463D87FC2757DAB90025922A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		463D87FE2757DB2B0025922A /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		463D8800275A36320025922A /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		463D8802275A44AC0025922A /* GameCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCaretaker.swift; sourceTree = "<group>"; };
+		463D8805275A52520025922A /* RateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
+		463D8806275A52520025922A /* RateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateTableViewCell.xib; sourceTree = "<group>"; };
+		463D880A275A5E8D0025922A /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +80,13 @@
 			children = (
 				463D87DA27568F770025922A /* Main.storyboard */,
 				463D87F42756B40F0025922A /* MainMenu */,
-				463D87F62756B4340025922A /* Question */,
+				463D87F62756B4340025922A /* Game */,
 				463D87F52756B4270025922A /* Rate */,
 				463D87ED2756B1810025922A /* Models */,
+				463D8809275A5E740025922A /* Time */,
 				463D87FB2756B7850025922A /* Fundamental */,
 				463D87E82756AEA30025922A /* Resources */,
+				463D87FC2757DAB90025922A /* Game.swift */,
 			);
 			path = "Let me ask";
 			sourceTree = "<group>";
@@ -90,6 +106,8 @@
 			children = (
 				463D87EE2756B1940025922A /* Question.swift */,
 				463D87F22756B2EB0025922A /* QuestionStorage.swift */,
+				463D87FE2757DB2B0025922A /* GameSession.swift */,
+				463D8800275A36320025922A /* Record.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,17 +123,19 @@
 		463D87F52756B4270025922A /* Rate */ = {
 			isa = PBXGroup;
 			children = (
+				463D8804275A521D0025922A /* Cell */,
 				463D87F72756B50F0025922A /* RateVC.swift */,
 			);
 			path = Rate;
 			sourceTree = "<group>";
 		};
-		463D87F62756B4340025922A /* Question */ = {
+		463D87F62756B4340025922A /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				463D87F92756B5600025922A /* QuestionVC.swift */,
+				463D87F92756B5600025922A /* GameVC.swift */,
+				463D8802275A44AC0025922A /* GameCaretaker.swift */,
 			);
-			path = Question;
+			path = Game;
 			sourceTree = "<group>";
 		};
 		463D87FB2756B7850025922A /* Fundamental */ = {
@@ -125,6 +145,23 @@
 				463D87D627568F770025922A /* SceneDelegate.swift */,
 			);
 			path = Fundamental;
+			sourceTree = "<group>";
+		};
+		463D8804275A521D0025922A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				463D8805275A52520025922A /* RateTableViewCell.swift */,
+				463D8806275A52520025922A /* RateTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		463D8809275A5E740025922A /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				463D880A275A5E8D0025922A /* DateFormatter.swift */,
+			);
+			path = Time;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				463D87E127568F790025922A /* LaunchScreen.storyboard in Resources */,
+				463D8808275A52520025922A /* RateTableViewCell.xib in Resources */,
 				463D87DE27568F790025922A /* Assets.xcassets in Resources */,
 				463D87DC27568F770025922A /* Main.storyboard in Resources */,
 			);
@@ -199,12 +237,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				463D87D927568F770025922A /* MainMenuVC.swift in Sources */,
+				463D8803275A44AC0025922A /* GameCaretaker.swift in Sources */,
 				463D87EF2756B1940025922A /* Question.swift in Sources */,
-				463D87FA2756B5600025922A /* QuestionVC.swift in Sources */,
+				463D87FA2756B5600025922A /* GameVC.swift in Sources */,
+				463D880B275A5E8D0025922A /* DateFormatter.swift in Sources */,
 				463D87D527568F770025922A /* AppDelegate.swift in Sources */,
+				463D8807275A52520025922A /* RateTableViewCell.swift in Sources */,
 				463D87F32756B2EB0025922A /* QuestionStorage.swift in Sources */,
 				463D87F82756B50F0025922A /* RateVC.swift in Sources */,
 				463D87D727568F770025922A /* SceneDelegate.swift in Sources */,
+				463D87FF2757DB2B0025922A /* GameSession.swift in Sources */,
+				463D8801275A36320025922A /* Record.swift in Sources */,
+				463D87FD2757DABA0025922A /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

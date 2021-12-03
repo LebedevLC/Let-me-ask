@@ -19,6 +19,8 @@ class MainMenuVC: UIViewController {
     }
 
     @IBAction func newGameButtonTapped(_ sender: UIButton) {
+        let game = GameSession(score: 0, questionCount: 0)
+        Game.shared.addGame(game)
         performSegue(withIdentifier: "goToGame", sender: nil)
     }
     

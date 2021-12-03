@@ -112,7 +112,7 @@
         <!--Вопросы-->
         <scene sceneID="3KM-XZ-KhA">
             <objects>
-                <viewController title="Вопросы" modalPresentationStyle="fullScreen" id="rgj-7K-WvT" customClass="QuestionVC" customModule="Let_me_ask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Вопросы" modalPresentationStyle="fullScreen" id="rgj-7K-WvT" customClass="GameVC" customModule="Let_me_ask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xyl-Z4-GzL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
