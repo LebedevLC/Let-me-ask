@@ -36,7 +36,7 @@ class RateVC: UIViewController {
                 date: date)
             )
         }
-        rateModel.sort{$0.date > $1.date}
+        rateModel.reverse()
     }
 }
 

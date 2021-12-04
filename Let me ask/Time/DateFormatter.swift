@@ -12,7 +12,7 @@ class DateFormatterRU {
     func ShowMeDate(date: Double) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MM yyyy HH:mm"
-        let date = Date(timeIntervalSinceReferenceDate: TimeInterval(date))
+        let date = Date(timeIntervalSince1970: TimeInterval(date))
         let stringDate = dateFormatter.string(from: date)
         return stringDate
     }

@@ -18,7 +18,6 @@ class GameVC: UIViewController {
     
     private var allQuestion: [Question] = []
     private var selectQuestion = 0
-    private var isWin = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,31 +90,41 @@ class GameVC: UIViewController {
     
     /// Правильный ответ
     private func rightAnswer() {
-        debugPrint("Win")
-        nextQuestion()
         Game.shared.incrementScore()
+        guard
+            let score = Game.shared.games?.score,
+            score >= allQuestion.count
+        else {
+            nextQuestion()
+            return
+        }
+        showAlert(isWin: true)
     }
     
     /// Конец игры
     private func finishGame() {
-        Game.shared.finishGame(username: "test")
-        showAlert()
+        showAlert(isWin: false)
     }
     
     /// Алерт для окончания игры
-    private func showAlert() {
+    private func showAlert(isWin: Bool) {
         var myTitle = ""
         isWin ? (myTitle = "Вы выиграли! Ура!") : (myTitle = "Вы проиграли!")
-        guard let score = Game.shared.score.last else { return }
+        guard
+            allQuestion.count != 0,
+            let localScore = Game.shared.games?.score
+        else { return }
+        let percentWin = ((Double(localScore) / Double(allQuestion.count)) * 100).rounded()
         let alertController = UIAlertController(
             title: myTitle,
             message: """
-            Колличество правильных ответов = \(score.score)
-            Колличество вопросов = \(score.questionCount)
-            Процент верных ответов = \(score.percentWin) %
+            Колличество правильных ответов = \(localScore)
+            Колличество вопросов = \(allQuestion.count)
+            Процент верных ответов = \(percentWin) %
             """,
             preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Ок", style: .destructive) { _ in
+            Game.shared.finishGame(username: "test", percent: percentWin)
             self.dismiss(animated: true)
         }
         alertController.addAction(cancelAction)

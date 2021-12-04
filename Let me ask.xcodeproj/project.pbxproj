@@ -81,7 +81,7 @@
 				463D87DA27568F770025922A /* Main.storyboard */,
 				463D87F42756B40F0025922A /* MainMenu */,
 				463D87F62756B4340025922A /* Game */,
-				463D87F52756B4270025922A /* Rate */,
+				463D87F52756B4270025922A /* Rating */,
 				463D87ED2756B1810025922A /* Models */,
 				463D8809275A5E740025922A /* Time */,
 				463D87FB2756B7850025922A /* Fundamental */,
@@ -120,13 +120,13 @@
 			path = MainMenu;
 			sourceTree = "<group>";
 		};
-		463D87F52756B4270025922A /* Rate */ = {
+		463D87F52756B4270025922A /* Rating */ = {
 			isa = PBXGroup;
 			children = (
 				463D8804275A521D0025922A /* Cell */,
 				463D87F72756B50F0025922A /* RateVC.swift */,
 			);
-			path = Rate;
+			path = Rating;
 			sourceTree = "<group>";
 		};
 		463D87F62756B4340025922A /* Game */ = {

@@ -40,21 +40,15 @@ final class Game {
         self.games?.questionCount = questionCount
     }
     
-    func finishGame(username: String) {
-        guard
-            let games = games,
-            games.questionCount > 0
-        else {
-            debugPrint("Question count must be not zero!")
-            return }
-        let percentWin = (Double(games.score) / Double(games.questionCount)) * 100
+    func finishGame(username: String, percent: Double) {
+        guard let games = games else { return }
         let score: Record = .init(
             score: games.score,
             questionCount: games.questionCount,
-            percentWin: percentWin,
+            percentWin: percent,
             username: username,
             date: Date().timeIntervalSince1970)
         self.score.append(score)
-        self.games = nil
+        clearGames()
     }
 }
