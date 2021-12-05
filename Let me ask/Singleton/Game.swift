@@ -28,7 +28,7 @@ final class Game {
         self.games = game
     }
 
-    func clearGames() {
+    func clearGame() {
         self.games = nil
     }
     
@@ -49,6 +49,6 @@ final class Game {
             username: username,
             date: Date().timeIntervalSince1970)
         self.score.append(score)
-        clearGames()
+        clearGame()
     }
 }

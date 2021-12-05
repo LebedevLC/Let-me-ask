@@ -15,10 +15,6 @@ class RateTableViewCell: UITableViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     override func prepareForReuse() {
         nameLabel.text = nil
         scoreLabel.text = nil

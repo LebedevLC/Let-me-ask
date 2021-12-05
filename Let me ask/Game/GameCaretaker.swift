@@ -16,7 +16,7 @@ protocol GameCaretakerProtocol {
     func retrieveRecords() -> [Record]
 }
 
-class GameCaretaker: GameCaretakerProtocol {
+final class GameCaretaker: GameCaretakerProtocol {
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
     private let key = "records"

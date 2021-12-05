@@ -13,7 +13,7 @@ struct RateModel {
     let date: String
 }
 
-class RateVC: UIViewController {
+final class RateVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,7 +27,7 @@ class RateVC: UIViewController {
         setupTable()
     }
     
-    func setupModel() {
+   private func setupModel() {
         for i in 0..<records.count {
             let date = dateFormatterRU.ShowMeDate(date: self.records[i].date)
             rateModel.append(.init(
@@ -41,7 +41,7 @@ class RateVC: UIViewController {
 }
 
 extension RateVC: UITableViewDataSource, UITableViewDelegate {
-    func setupTable() {
+    private func setupTable() {
         tableView.register(UINib(nibName: RateTableViewCell.identifier,
                                  bundle: nil), forCellReuseIdentifier: RateTableViewCell.identifier)
         tableView.delegate = self

@@ -87,11 +87,11 @@
 				463D87F62756B4340025922A /* Game */,
 				463D87F52756B4270025922A /* Rating */,
 				463D87ED2756B1810025922A /* Models */,
+				464ABAE6275BDCB6007AB78B /* Singleton */,
 				463D8809275A5E740025922A /* Time */,
 				463D87FB2756B7850025922A /* Fundamental */,
 				464ABAE1275BD1A0007AB78B /* Castom */,
 				463D87E82756AEA30025922A /* Resources */,
-				463D87FC2757DAB90025922A /* Game.swift */,
 			);
 			path = "Let me ask";
 			sourceTree = "<group>";
@@ -176,6 +176,14 @@
 				464ABAE4275BD597007AB78B /* MyButton.swift */,
 			);
 			path = Castom;
+			sourceTree = "<group>";
+		};
+		464ABAE6275BDCB6007AB78B /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				463D87FC2757DAB90025922A /* Game.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameVC: UIViewController {
+final class GameVC: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -112,19 +112,19 @@ class GameVC: UIViewController {
         isWin ? (myTitle = "Вы выиграли! Ура!") : (myTitle = "Вы проиграли!")
         guard
             allQuestion.count != 0,
-            let localScore = Game.shared.games?.score
+            let localScore = Game.shared.games
         else { return }
-        let percentWin = ((Double(localScore) / Double(allQuestion.count)) * 100).rounded()
+        let percentWin = ((Double(localScore.score) / Double(allQuestion.count)) * 100).rounded()
         let alertController = UIAlertController(
             title: myTitle,
             message: """
-            Колличество правильных ответов = \(localScore)
+            Колличество правильных ответов = \(localScore.score)
             Колличество вопросов = \(allQuestion.count)
             Процент верных ответов = \(percentWin) %
             """,
             preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Ок", style: .destructive) { _ in
-            Game.shared.finishGame(username: "test", percent: percentWin)
+            Game.shared.finishGame(username: localScore.username, percent: percentWin)
             self.dismiss(animated: true)
         }
         alertController.addAction(cancelAction)

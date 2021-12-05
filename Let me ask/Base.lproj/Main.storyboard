@@ -63,17 +63,41 @@
                                 <rect key="frame" x="108.5" y="283" width="197.5" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-S2-e0H">
+                                <rect key="frame" x="91.5" y="499" width="231" height="40"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Новая игра"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Настройки сложности">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="system" size="20"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zz0-eb-sQv"/>
+                                    <segue destination="Moi-yB-YLF" kind="show" identifier="goToSettings" id="hxx-Tm-cRY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="4"/>
                         <constraints>
                             <constraint firstItem="nOW-Z7-kPo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="85O-ZF-4AV"/>
+                            <constraint firstItem="hgT-S2-e0H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hew-Iq-zQq"/>
                             <constraint firstItem="5ZZ-Me-s0N" firstAttribute="top" secondItem="nOW-Z7-kPo" secondAttribute="bottom" constant="80" id="KeU-8G-5bT"/>
                             <constraint firstItem="nOW-Z7-kPo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KfJ-Ud-Jhi"/>
+                            <constraint firstItem="5ZZ-Me-s0N" firstAttribute="top" secondItem="hgT-S2-e0H" secondAttribute="bottom" constant="20" id="V7P-vW-YmS"/>
                             <constraint firstItem="nOW-Z7-kPo" firstAttribute="top" secondItem="RX0-dM-Rcl" secondAttribute="bottom" constant="100" id="h20-BN-qd6"/>
                             <constraint firstItem="5ZZ-Me-s0N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIP-dE-QAq"/>
+                            <constraint firstItem="hgT-S2-e0H" firstAttribute="top" secondItem="nOW-Z7-kPo" secondAttribute="bottom" constant="20" id="ieb-Kk-trA"/>
                             <constraint firstItem="RX0-dM-Rcl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="niO-74-3o8"/>
                         </constraints>
                     </view>
@@ -81,11 +105,56 @@
                         <outlet property="nameTextField" destination="RX0-dM-Rcl" id="Vf8-N4-9yo"/>
                         <outlet property="newGameButton" destination="nOW-Z7-kPo" id="lVr-4K-wph"/>
                         <outlet property="rateButton" destination="5ZZ-Me-s0N" id="a6P-ZL-dyn"/>
+                        <outlet property="settingsButton" destination="hgT-S2-e0H" id="GWw-i9-iJr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ofv-Q5-VUD">
+            <objects>
+                <viewController id="Moi-yB-YLF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tEl-Ws-vib" customClass="MainGradiendView" customModule="Let_me_ask" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YIw-xT-exv">
+                                <rect key="frame" x="62.5" y="405.5" width="289" height="32"/>
+                                <segments>
+                                    <segment title="Последовательном"/>
+                                    <segment title="Случайном"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq7-7p-HRD">
+                                <rect key="frame" x="61.5" y="345" width="291.5" height="20.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="В каком порядке задавать вопросы?">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RpB-11-eNQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YIw-xT-exv" firstAttribute="centerY" secondItem="tEl-Ws-vib" secondAttribute="centerY" id="Dkk-ah-goc"/>
+                            <constraint firstItem="eq7-7p-HRD" firstAttribute="centerX" secondItem="tEl-Ws-vib" secondAttribute="centerX" id="LbI-zJ-5oO"/>
+                            <constraint firstItem="YIw-xT-exv" firstAttribute="top" secondItem="eq7-7p-HRD" secondAttribute="bottom" constant="40" id="bi5-vr-tqs"/>
+                            <constraint firstItem="YIw-xT-exv" firstAttribute="centerX" secondItem="tEl-Ws-vib" secondAttribute="centerX" id="gHd-f8-rGk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Deb-vv-SIu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCR-rY-QIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508.6956521739132" y="-90.401785714285708"/>
         </scene>
         <!--Таблица рейтинга-->
         <scene sceneID="Xbc-Ra-OfT">
@@ -115,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIE-gp-QR8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588" y="825"/>
+            <point key="canvasLocation" x="1509" y="590"/>
         </scene>
         <!--Вопросы-->
         <scene sceneID="3KM-XZ-KhA">
@@ -131,7 +200,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="P6p-Ne-SKT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOf-SW-SSC">
@@ -144,7 +213,7 @@
                                             <constraint firstAttribute="height" constant="173" id="f41-4T-06l"/>
                                             <constraint firstAttribute="width" constant="173" id="hgu-Ri-4Ws"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
@@ -158,7 +227,7 @@
                                             <constraint firstAttribute="height" constant="173" id="15l-1i-MEo"/>
                                             <constraint firstAttribute="width" constant="173" id="5vH-Wt-Csc"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
@@ -172,7 +241,7 @@
                                             <constraint firstAttribute="width" constant="173" id="8hD-RF-S9s"/>
                                             <constraint firstAttribute="height" constant="173" id="jrW-gl-des"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
@@ -186,7 +255,7 @@
                                             <constraint firstAttribute="width" constant="173" id="KrY-lY-Ds9"/>
                                             <constraint firstAttribute="height" constant="173" id="diZ-h2-cZx"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
@@ -243,12 +312,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5z-Z9-4iO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898.55072463768124" y="825"/>
+            <point key="canvasLocation" x="132" y="1001"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="3">
-            <color red="0.97254901960784312" green="0.67843137254901964" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97299998998641968" green="0.67799997329711914" blue="0.61599999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="4">
             <color red="0.98431372549019602" green="0.7686274509803922" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -258,6 +327,9 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

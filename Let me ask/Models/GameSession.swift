@@ -10,4 +10,5 @@ import Foundation
 struct GameSession {
     var score: Int
     var questionCount: Int
+    var username: String
 }
