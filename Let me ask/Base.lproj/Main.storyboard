@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsVC-->
         <scene sceneID="Ofv-Q5-VUD">
             <objects>
-                <viewController id="Moi-yB-YLF" sceneMemberID="viewController">
+                <viewController id="Moi-yB-YLF" customClass="SettingsVC" customModule="Let_me_ask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tEl-Ws-vib" customClass="MainGradiendView" customModule="Let_me_ask" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,6 +151,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Deb-vv-SIu"/>
+                    <connections>
+                        <outlet property="sequenceQuestionSegmetControl" destination="YIw-xT-exv" id="U1z-DH-t28"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCR-rY-QIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

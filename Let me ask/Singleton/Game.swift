@@ -12,6 +12,7 @@ final class Game {
     static let shared = Game()
 
     private(set) var games: GameSession?
+    private(set) var sequence: Sequence
     private(set) var score: [Record] = [] {
         didSet {
             recordsCaretaker.save(records: self.score)
@@ -22,10 +23,15 @@ final class Game {
 
     private init() {
         self.score = self.recordsCaretaker.retrieveRecords()
+        self.sequence = .normal
     }
     
     func addGame(_ game: GameSession) {
         self.games = game
+    }
+    
+    func selectStrategy(sequence: Sequence) {
+        self.sequence = sequence
     }
 
     func clearGame() {

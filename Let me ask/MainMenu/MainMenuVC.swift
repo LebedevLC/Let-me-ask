@@ -14,6 +14,15 @@ class MainMenuVC: UIViewController {
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
+    private var sequenceQuestionStrategy: SequenceQuestionStrategy {
+        switch Game.shared.sequence {
+        case .normal:
+            return SequenceQuestionNormalStrategy()
+        case .random:
+            return SequenceQuestionRandomStrategy()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.text = Game.shared.score.last?.username ?? ""
@@ -44,6 +53,19 @@ class MainMenuVC: UIViewController {
         performSegue(withIdentifier: "goToGame", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "goToGame":
+            let destinationVC = segue.destination as? GameVC
+            destinationVC?.sequenceQuestionStrategy = self.sequenceQuestionStrategy
+        case "goToRate":
+            break
+        case "goToSettings":
+            break
+        default:
+            break
+        }
+    }
     
 }
 

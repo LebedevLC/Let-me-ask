@@ -17,12 +17,14 @@ final class GameVC: UIViewController {
     @IBOutlet weak var answer4Button: UIButton!
     
     private var allQuestion: [Question] = []
-    private var selectQuestion = 0
+    private var selectQuestion = -1
+    
+    var sequenceQuestionStrategy: SequenceQuestionStrategy?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         allQuestion = QuestionStorage().questions
-        randomQuestion()
+        nextQuestion()
         beganGame()
     }
     
@@ -55,21 +57,17 @@ final class GameVC: UIViewController {
         Game.shared.setupQuestionCount(questionCount: allQuestion.count)
     }
     
-    /// Получить случайный вопрос
-    private func randomQuestion() {
-        let rand = Int.random(in: 0..<allQuestion.count)
-        selectQuestion = rand
-        presentQuestion(questionNumber: rand)
-    }
-    
-    /// Получить следующий вопрос (без конца)
+    /// Реализация стратегии
     private func nextQuestion() {
-        if  selectQuestion + 1 >= allQuestion.count {
-            selectQuestion = 0
+        let nextSelectQuestion = sequenceQuestionStrategy!.nextQuestion(
+            selectQuestion: self.selectQuestion,
+            count: allQuestion.count)
+        if nextSelectQuestion >= 0 {
+            selectQuestion = nextSelectQuestion
+            presentQuestion(questionNumber: nextSelectQuestion)
         } else {
-            selectQuestion = selectQuestion + 1
+            showAlert(isWin: true)
         }
-        presentQuestion(questionNumber: selectQuestion)
     }
     
     /// Отобразить вопрос

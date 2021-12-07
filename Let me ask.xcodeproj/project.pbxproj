@@ -26,6 +26,10 @@
 		463D880B275A5E8D0025922A /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D880A275A5E8D0025922A /* DateFormatter.swift */; };
 		464ABAE3275BD1B2007AB78B /* MainGradiendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAE2275BD1B2007AB78B /* MainGradiendView.swift */; };
 		464ABAE5275BD597007AB78B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAE4275BD597007AB78B /* MyButton.swift */; };
+		464ABAE9275E344E007AB78B /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAE8275E344E007AB78B /* SettingsVC.swift */; };
+		464ABAEC275E3660007AB78B /* SequenceQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */; };
+		464ABAEE275E4451007AB78B /* SQNormalStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAED275E4451007AB78B /* SQNormalStrategy.swift */; };
+		464ABAF0275E446F007AB78B /* SQRandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		463D880A275A5E8D0025922A /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		464ABAE2275BD1B2007AB78B /* MainGradiendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGradiendView.swift; sourceTree = "<group>"; };
 		464ABAE4275BD597007AB78B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		464ABAE8275E344E007AB78B /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceQuestionStrategy.swift; sourceTree = "<group>"; };
+		464ABAED275E4451007AB78B /* SQNormalStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQNormalStrategy.swift; sourceTree = "<group>"; };
+		464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQRandomStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				463D87DA27568F770025922A /* Main.storyboard */,
+				464ABAEA275E3635007AB78B /* Strategy */,
 				463D87F42756B40F0025922A /* MainMenu */,
+				464ABAE7275E3421007AB78B /* Settings */,
 				463D87F62756B4340025922A /* Game */,
 				463D87F52756B4270025922A /* Rating */,
 				463D87ED2756B1810025922A /* Models */,
@@ -186,6 +196,24 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		464ABAE7275E3421007AB78B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				464ABAE8275E344E007AB78B /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		464ABAEA275E3635007AB78B /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */,
+				464ABAED275E4451007AB78B /* SQNormalStrategy.swift */,
+				464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,9 +288,11 @@
 			files = (
 				463D87D927568F770025922A /* MainMenuVC.swift in Sources */,
 				463D8803275A44AC0025922A /* GameCaretaker.swift in Sources */,
+				464ABAF0275E446F007AB78B /* SQRandomStrategy.swift in Sources */,
 				464ABAE5275BD597007AB78B /* MyButton.swift in Sources */,
 				463D87EF2756B1940025922A /* Question.swift in Sources */,
 				463D87FA2756B5600025922A /* GameVC.swift in Sources */,
+				464ABAE9275E344E007AB78B /* SettingsVC.swift in Sources */,
 				463D880B275A5E8D0025922A /* DateFormatter.swift in Sources */,
 				463D87D527568F770025922A /* AppDelegate.swift in Sources */,
 				463D8807275A52520025922A /* RateTableViewCell.swift in Sources */,
@@ -271,7 +301,9 @@
 				463D87D727568F770025922A /* SceneDelegate.swift in Sources */,
 				464ABAE3275BD1B2007AB78B /* MainGradiendView.swift in Sources */,
 				463D87FF2757DB2B0025922A /* GameSession.swift in Sources */,
+				464ABAEC275E3660007AB78B /* SequenceQuestionStrategy.swift in Sources */,
 				463D8801275A36320025922A /* Record.swift in Sources */,
+				464ABAEE275E4451007AB78B /* SQNormalStrategy.swift in Sources */,
 				463D87FD2757DABA0025922A /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
