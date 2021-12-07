@@ -10,6 +10,7 @@ import UIKit
 final class GameVC: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     @IBOutlet weak var answer1Button: UIButton!
     @IBOutlet weak var answer2Button: UIButton!
@@ -17,7 +18,13 @@ final class GameVC: UIViewController {
     @IBOutlet weak var answer4Button: UIButton!
     
     private var allQuestion: [Question] = []
-    private var selectQuestion = -1
+    private var selectQuestion = -1 {
+        didSet {
+            self.observableSelectQuestion.value += 1
+        }
+    }
+    
+    private var observableSelectQuestion = Observable<Int>(0)
     
     var sequenceQuestionStrategy: SequenceQuestionStrategy?
     
@@ -54,8 +61,18 @@ final class GameVC: UIViewController {
     
     /// Начало игры
     private func beganGame() {
-        Game.shared.setupQuestionCount(questionCount: allQuestion.count)
-    }
+        let allQuestionCount = allQuestion.count
+        Game.shared.setupQuestionCount(questionCount: allQuestionCount)
+        
+        // Добавляем наблюдателя
+        observableSelectQuestion.addObserver(
+            self,
+            options: [.new, .initial],
+            closure: { [weak self] (selectQuestion, _) in
+            guard let self = self else { return }
+            self.statusLabel.text = "Вопрос \(selectQuestion) из \(allQuestionCount)"
+        })
+}
     
     /// Реализация стратегии
     private func nextQuestion() {

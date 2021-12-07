@@ -14,8 +14,10 @@ class MainMenuVC: UIViewController {
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
+    private var tapGesture: UITapGestureRecognizer?
+    
     private var sequenceQuestionStrategy: SequenceQuestionStrategy {
-        switch Game.shared.sequence {
+        switch Game.shared.sequenceStrategy {
         case .normal:
             return SequenceQuestionNormalStrategy()
         case .random:
@@ -23,8 +25,11 @@ class MainMenuVC: UIViewController {
         }
     }
     
+// MARK: - Life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setMyTap()
         nameTextField.text = Game.shared.score.last?.username ?? ""
     }
 
@@ -37,6 +42,8 @@ class MainMenuVC: UIViewController {
             return }
         letsGo(name: name)
     }
+    
+    // MARK: - Segue
     
     @IBAction func rateButtonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "goToRate", sender: nil)
@@ -66,8 +73,9 @@ class MainMenuVC: UIViewController {
             break
         }
     }
-    
 }
+
+// MARK: - Alert
 
 extension MainMenuVC {
     private func showAlert() {
@@ -84,11 +92,24 @@ extension MainMenuVC {
         alertController.addAction(cancelAction)
         
         let okAction = UIAlertAction(title: "Оставить стандартное", style: .default) { _ in
-            self.letsGo(name: "Загадочный мыслитель")
+            self.letsGo(name: "Мыслитель")
         }
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: {})
     }
 }
 
+// MARK: - Keyboard
+
+extension MainMenuVC {
+    
+    private func setMyTap() {
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture!)
+    }
+    
+    @objc private func hideKeyboard() {
+        self.view?.endEditing(true)
+    }
+}
 

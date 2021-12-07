@@ -198,7 +198,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос произвольной длинны" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqz-OL-0xn">
-                                <rect key="frame" x="8" y="84" width="398" height="72"/>
+                                <rect key="frame" x="8" y="100" width="398" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="P6p-Ne-SKT"/>
                                 </constraints>
@@ -291,17 +291,26 @@
                                     <action selector="helpButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="v3O-5y-Cvc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 3 из 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aai-Ud-Wgd">
+                                <rect key="frame" x="24" y="60" width="366" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zuu-DV-cIe"/>
                         <color key="backgroundColor" name="4"/>
                         <constraints>
+                            <constraint firstItem="aai-Ud-Wgd" firstAttribute="top" secondItem="zuu-DV-cIe" secondAttribute="top" constant="16" id="2VZ-N6-ILv"/>
+                            <constraint firstItem="aai-Ud-Wgd" firstAttribute="leading" secondItem="zuu-DV-cIe" secondAttribute="leading" constant="24" id="7lQ-nM-FbX"/>
                             <constraint firstItem="zuu-DV-cIe" firstAttribute="bottom" secondItem="bOf-SW-SSC" secondAttribute="bottom" constant="16" id="8n5-5Z-hwT"/>
                             <constraint firstItem="m6z-4I-viv" firstAttribute="centerX" secondItem="xyl-Z4-GzL" secondAttribute="centerX" id="IZT-D2-vHQ"/>
                             <constraint firstItem="zuu-DV-cIe" firstAttribute="trailing" secondItem="zqz-OL-0xn" secondAttribute="trailing" constant="8" id="NLs-dQ-qaH"/>
                             <constraint firstItem="bOf-SW-SSC" firstAttribute="centerX" secondItem="xyl-Z4-GzL" secondAttribute="centerX" id="Qg9-L7-GI1"/>
-                            <constraint firstItem="zqz-OL-0xn" firstAttribute="top" secondItem="zuu-DV-cIe" secondAttribute="top" constant="40" id="VKc-GH-bM6"/>
+                            <constraint firstItem="zuu-DV-cIe" firstAttribute="trailing" secondItem="aai-Ud-Wgd" secondAttribute="trailing" constant="24" id="TuG-6E-bcc"/>
                             <constraint firstItem="zqz-OL-0xn" firstAttribute="leading" secondItem="zuu-DV-cIe" secondAttribute="leading" constant="8" id="bat-Rz-eJI"/>
                             <constraint firstItem="bOf-SW-SSC" firstAttribute="top" secondItem="m6z-4I-viv" secondAttribute="bottom" constant="40" id="ere-Tb-3Ql"/>
+                            <constraint firstItem="zqz-OL-0xn" firstAttribute="top" secondItem="aai-Ud-Wgd" secondAttribute="bottom" constant="16" id="nMo-x2-R1f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ofd-kk-cma"/>
@@ -311,6 +320,7 @@
                         <outlet property="answer3Button" destination="vVR-ad-zyL" id="Irb-ad-j3V"/>
                         <outlet property="answer4Button" destination="Efr-pF-SFE" id="uTa-2t-dGz"/>
                         <outlet property="questionLabel" destination="zqz-OL-0xn" id="PaD-hV-nE4"/>
+                        <outlet property="statusLabel" destination="aai-Ud-Wgd" id="uWq-uf-uSI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5z-Z9-4iO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

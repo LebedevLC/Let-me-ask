@@ -33,7 +33,7 @@ class SettingsVC: UIViewController {
     }
     
     private func setupSegmentControl() {
-        let selected = Game.shared.sequence
+        let selected = Game.shared.sequenceStrategy
         sequenceQuestionSegmetControl.selectedSegmentIndex = selected == .random ? 1 : 0
     }
 }

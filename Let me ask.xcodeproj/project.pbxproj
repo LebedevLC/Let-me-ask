@@ -30,6 +30,7 @@
 		464ABAEC275E3660007AB78B /* SequenceQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */; };
 		464ABAEE275E4451007AB78B /* SQNormalStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAED275E4451007AB78B /* SQNormalStrategy.swift */; };
 		464ABAF0275E446F007AB78B /* SQRandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */; };
+		464ABAF3275FBA48007AB78B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAF2275FBA48007AB78B /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceQuestionStrategy.swift; sourceTree = "<group>"; };
 		464ABAED275E4451007AB78B /* SQNormalStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQNormalStrategy.swift; sourceTree = "<group>"; };
 		464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQRandomStrategy.swift; sourceTree = "<group>"; };
+		464ABAF2275FBA48007AB78B /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				464ABAE6275BDCB6007AB78B /* Singleton */,
 				463D8809275A5E740025922A /* Time */,
 				463D87FB2756B7850025922A /* Fundamental */,
+				464ABAF1275FBA2D007AB78B /* Librarys */,
 				464ABAE1275BD1A0007AB78B /* Castom */,
 				463D87E82756AEA30025922A /* Resources */,
 			);
@@ -214,6 +217,14 @@
 			path = Strategy;
 			sourceTree = "<group>";
 		};
+		464ABAF1275FBA2D007AB78B /* Librarys */ = {
+			isa = PBXGroup;
+			children = (
+				464ABAF2275FBA48007AB78B /* Observer.swift */,
+			);
+			path = Librarys;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				463D87D927568F770025922A /* MainMenuVC.swift in Sources */,
+				464ABAF3275FBA48007AB78B /* Observer.swift in Sources */,
 				463D8803275A44AC0025922A /* GameCaretaker.swift in Sources */,
 				464ABAF0275E446F007AB78B /* SQRandomStrategy.swift in Sources */,
 				464ABAE5275BD597007AB78B /* MyButton.swift in Sources */,
