@@ -13,6 +13,7 @@ class MainMenuVC: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var addQuestionButton: UIButton!
     
     private var tapGesture: UITapGestureRecognizer?
     
@@ -60,6 +61,10 @@ class MainMenuVC: UIViewController {
         performSegue(withIdentifier: "goToGame", sender: nil)
     }
     
+    @IBAction func addQuestionButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToAddQuestion", sender: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "goToGame":
@@ -68,6 +73,8 @@ class MainMenuVC: UIViewController {
         case "goToRate":
             break
         case "goToSettings":
+            break
+        case "goToAddQuestion":
             break
         default:
             break

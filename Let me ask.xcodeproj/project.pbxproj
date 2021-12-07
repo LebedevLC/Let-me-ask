@@ -31,6 +31,7 @@
 		464ABAEE275E4451007AB78B /* SQNormalStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAED275E4451007AB78B /* SQNormalStrategy.swift */; };
 		464ABAF0275E446F007AB78B /* SQRandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */; };
 		464ABAF3275FBA48007AB78B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAF2275FBA48007AB78B /* Observer.swift */; };
+		46AC4D36275FD7010076C258 /* AddQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D35275FD7010076C258 /* AddQuestionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		464ABAED275E4451007AB78B /* SQNormalStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQNormalStrategy.swift; sourceTree = "<group>"; };
 		464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQRandomStrategy.swift; sourceTree = "<group>"; };
 		464ABAF2275FBA48007AB78B /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		46AC4D35275FD7010076C258 /* AddQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				464ABAE7275E3421007AB78B /* Settings */,
 				463D87F62756B4340025922A /* Game */,
 				463D87F52756B4270025922A /* Rating */,
+				46AC4D34275FD6DA0076C258 /* AddQuestion */,
 				463D87ED2756B1810025922A /* Models */,
 				464ABAE6275BDCB6007AB78B /* Singleton */,
 				463D8809275A5E740025922A /* Time */,
@@ -225,6 +228,14 @@
 			path = Librarys;
 			sourceTree = "<group>";
 		};
+		46AC4D34275FD6DA0076C258 /* AddQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				46AC4D35275FD7010076C258 /* AddQuestionVC.swift */,
+			);
+			path = AddQuestion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +315,7 @@
 				464ABAE5275BD597007AB78B /* MyButton.swift in Sources */,
 				463D87EF2756B1940025922A /* Question.swift in Sources */,
 				463D87FA2756B5600025922A /* GameVC.swift in Sources */,
+				46AC4D36275FD7010076C258 /* AddQuestionVC.swift in Sources */,
 				464ABAE9275E344E007AB78B /* SettingsVC.swift in Sources */,
 				463D880B275A5E8D0025922A /* DateFormatter.swift in Sources */,
 				463D87D527568F770025922A /* AppDelegate.swift in Sources */,
