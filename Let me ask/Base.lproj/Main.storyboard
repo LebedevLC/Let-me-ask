@@ -222,67 +222,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш вопрос" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFX-LJ-YQC">
-                                <rect key="frame" x="112.5" y="24" width="189" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="104.5" y="24" width="205.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите ваш вопрос" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-J0-Ntv">
-                                <rect key="frame" x="16" y="64" width="382" height="34"/>
+                                <rect key="frame" x="16" y="66.5" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите верный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNP-bw-dpX">
-                                <rect key="frame" x="104.5" y="122" width="205" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="95.5" y="124.5" width="223" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите верный ответ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eng-gv-caZ">
-                                <rect key="frame" x="16" y="162" width="382" height="34"/>
+                                <rect key="frame" x="16" y="167" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неверный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub4-qm-dHn">
-                                <rect key="frame" x="93.5" y="220" width="227.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="83.5" y="225" width="247" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите неверный ответ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AX0-Eg-pYg">
-                                <rect key="frame" x="16" y="260" width="382" height="34"/>
+                                <rect key="frame" x="16" y="267.5" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неверный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hx-h9-kvB">
-                                <rect key="frame" x="93.5" y="318" width="227.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="83.5" y="325.5" width="247" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите неверный ответ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsr-5T-t60">
-                                <rect key="frame" x="16" y="358" width="382" height="34"/>
+                                <rect key="frame" x="16" y="368" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неверный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw5-Qa-UH0">
-                                <rect key="frame" x="93.5" y="416" width="227.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="83.5" y="426" width="247" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите неверный ответ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VrX-qA-YSJ">
-                                <rect key="frame" x="16" y="456" width="382" height="34"/>
+                                <rect key="frame" x="16" y="468.5" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-JQ-B9h" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                <rect key="frame" x="144.5" y="522" width="125" height="37"/>
+                                <rect key="frame" x="144.5" y="534.5" width="125" height="37"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
@@ -311,7 +311,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-dJ-rHc" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                <rect key="frame" x="144.5" y="591" width="125" height="37"/>
+                                <rect key="frame" x="144.5" y="603.5" width="125" height="37"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
@@ -339,25 +339,78 @@
                                     <action selector="clearButtonTapped:" destination="ZLN-p2-KC0" eventType="touchUpInside" id="SdQ-b9-s84"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-vs-75i">
+                                <rect key="frame" x="334.5" y="123.5" width="30" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6lX-ng-k9a"/>
+                                    <constraint firstAttribute="height" constant="30" id="tJw-6s-epb"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multiply.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Amk-4j-ZMc">
+                                <rect key="frame" x="346.5" y="224" width="30" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="7gJ-hB-fZa"/>
+                                    <constraint firstAttribute="height" constant="30" id="nac-Pd-13V"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multiply.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7g0-mt-bk7">
+                                <rect key="frame" x="346.5" y="324.5" width="30" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Lp-T9-Cva"/>
+                                    <constraint firstAttribute="width" constant="30" id="tZw-Qi-xhS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multiply.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eXN-qy-PiF">
+                                <rect key="frame" x="346.5" y="425" width="30" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Zjp-EO-sRr"/>
+                                    <constraint firstAttribute="height" constant="30" id="vf3-7H-fig"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ngw-2P-bSg">
+                                <rect key="frame" x="328" y="22.5" width="30" height="29.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.31764706970000001" green="0.69803923369999998" blue="0.8392156959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="77a-CF-8fq"/>
+                                    <constraint firstAttribute="width" constant="30" id="gtP-cB-7MO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rnt-uY-Sau"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dzM-JQ-B9h" firstAttribute="centerX" secondItem="ASS-cn-eId" secondAttribute="centerX" id="1ah-Te-TyS"/>
                             <constraint firstItem="Uw5-Qa-UH0" firstAttribute="centerX" secondItem="ASS-cn-eId" secondAttribute="centerX" id="3et-Lh-2dU"/>
+                            <constraint firstItem="vxn-vs-75i" firstAttribute="leading" secondItem="PNP-bw-dpX" secondAttribute="trailing" constant="16" id="6gF-yi-qmW"/>
                             <constraint firstItem="YOj-dJ-rHc" firstAttribute="top" secondItem="dzM-JQ-B9h" secondAttribute="bottom" constant="32" id="7C6-ZT-mWm"/>
                             <constraint firstItem="VrX-qA-YSJ" firstAttribute="top" secondItem="Uw5-Qa-UH0" secondAttribute="bottom" constant="16" id="904-hE-BVe"/>
                             <constraint firstItem="rnt-uY-Sau" firstAttribute="trailing" secondItem="Hrs-J0-Ntv" secondAttribute="trailing" constant="16" id="9kd-u7-jcn"/>
                             <constraint firstItem="Eng-gv-caZ" firstAttribute="top" secondItem="PNP-bw-dpX" secondAttribute="bottom" constant="16" id="CLn-Fx-Iji"/>
+                            <constraint firstItem="Ngw-2P-bSg" firstAttribute="centerY" secondItem="bFX-LJ-YQC" secondAttribute="centerY" id="CNf-1P-ZAQ"/>
+                            <constraint firstItem="vxn-vs-75i" firstAttribute="centerY" secondItem="PNP-bw-dpX" secondAttribute="centerY" id="DHV-Jf-YWy"/>
                             <constraint firstItem="AX0-Eg-pYg" firstAttribute="top" secondItem="Ub4-qm-dHn" secondAttribute="bottom" constant="16" id="DKg-SL-7wc"/>
                             <constraint firstItem="PNP-bw-dpX" firstAttribute="top" secondItem="Hrs-J0-Ntv" secondAttribute="bottom" constant="24" id="DzT-fq-YMQ"/>
                             <constraint firstItem="bFX-LJ-YQC" firstAttribute="top" secondItem="rnt-uY-Sau" secondAttribute="top" constant="24" id="F8I-Km-4sw"/>
+                            <constraint firstItem="7g0-mt-bk7" firstAttribute="leading" secondItem="7hx-h9-kvB" secondAttribute="trailing" constant="16" id="Gi3-vX-gSi"/>
                             <constraint firstItem="7hx-h9-kvB" firstAttribute="top" secondItem="AX0-Eg-pYg" secondAttribute="bottom" constant="24" id="HEx-jw-8Hz"/>
                             <constraint firstItem="VrX-qA-YSJ" firstAttribute="leading" secondItem="rnt-uY-Sau" secondAttribute="leading" constant="16" id="Ii6-pv-pcI"/>
+                            <constraint firstItem="7g0-mt-bk7" firstAttribute="centerY" secondItem="7hx-h9-kvB" secondAttribute="centerY" id="Ivf-rn-VIJ"/>
                             <constraint firstItem="Uw5-Qa-UH0" firstAttribute="top" secondItem="jsr-5T-t60" secondAttribute="bottom" constant="24" id="KQ5-NR-CqT"/>
                             <constraint firstItem="rnt-uY-Sau" firstAttribute="trailing" secondItem="VrX-qA-YSJ" secondAttribute="trailing" constant="16" id="Nzo-xW-CyI"/>
+                            <constraint firstItem="Amk-4j-ZMc" firstAttribute="centerY" secondItem="Ub4-qm-dHn" secondAttribute="centerY" id="Oih-rd-4iU"/>
+                            <constraint firstItem="Ngw-2P-bSg" firstAttribute="leading" secondItem="bFX-LJ-YQC" secondAttribute="trailing" constant="18" id="PXY-Ko-Zdc"/>
                             <constraint firstItem="Ub4-qm-dHn" firstAttribute="centerX" secondItem="ASS-cn-eId" secondAttribute="centerX" id="RFH-D1-BSg"/>
                             <constraint firstItem="YOj-dJ-rHc" firstAttribute="centerX" secondItem="ASS-cn-eId" secondAttribute="centerX" id="SHk-Da-VBa"/>
+                            <constraint firstItem="Amk-4j-ZMc" firstAttribute="leading" secondItem="Ub4-qm-dHn" secondAttribute="trailing" constant="16" id="Vck-xj-wNg"/>
                             <constraint firstItem="Hrs-J0-Ntv" firstAttribute="leading" secondItem="rnt-uY-Sau" secondAttribute="leading" constant="16" id="Wjc-qI-aCf"/>
                             <constraint firstItem="YOj-dJ-rHc" firstAttribute="width" secondItem="dzM-JQ-B9h" secondAttribute="width" id="ZfX-IJ-AyF"/>
                             <constraint firstItem="Eng-gv-caZ" firstAttribute="leading" secondItem="rnt-uY-Sau" secondAttribute="leading" constant="16" id="ZoP-vx-HX8"/>
@@ -370,8 +423,10 @@
                             <constraint firstItem="dzM-JQ-B9h" firstAttribute="top" secondItem="VrX-qA-YSJ" secondAttribute="bottom" constant="32" id="kJO-jy-01K"/>
                             <constraint firstItem="bFX-LJ-YQC" firstAttribute="centerX" secondItem="ASS-cn-eId" secondAttribute="centerX" id="mDe-hW-hxE"/>
                             <constraint firstItem="Ub4-qm-dHn" firstAttribute="top" secondItem="Eng-gv-caZ" secondAttribute="bottom" constant="24" id="oPK-9c-XCM"/>
+                            <constraint firstItem="eXN-qy-PiF" firstAttribute="centerY" secondItem="Uw5-Qa-UH0" secondAttribute="centerY" id="prz-lH-t6z"/>
                             <constraint firstItem="rnt-uY-Sau" firstAttribute="trailing" secondItem="jsr-5T-t60" secondAttribute="trailing" constant="16" id="sWh-bv-i4F"/>
                             <constraint firstItem="rnt-uY-Sau" firstAttribute="trailing" secondItem="AX0-Eg-pYg" secondAttribute="trailing" constant="16" id="tIS-cd-RFY"/>
+                            <constraint firstItem="eXN-qy-PiF" firstAttribute="leading" secondItem="Uw5-Qa-UH0" secondAttribute="trailing" constant="16" id="xcO-qZ-Vxw"/>
                             <constraint firstItem="PNP-bw-dpX" firstAttribute="centerX" secondItem="ASS-cn-eId" secondAttribute="centerX" id="ynE-EZ-xt0"/>
                         </constraints>
                     </view>
@@ -380,10 +435,14 @@
                         <outlet property="clearButton" destination="YOj-dJ-rHc" id="TH6-ht-T9N"/>
                         <outlet property="questionTextField" destination="Hrs-J0-Ntv" id="sbw-Kv-rsg"/>
                         <outlet property="rightAnswerTextField" destination="Eng-gv-caZ" id="mwa-Rv-dKO"/>
+                        <outlet property="rightLabel" destination="PNP-bw-dpX" id="67m-Is-sek"/>
                         <outlet property="saveButton" destination="dzM-JQ-B9h" id="e4z-EC-zny"/>
                         <outlet property="wrong1AnswerTextField" destination="AX0-Eg-pYg" id="Fge-7G-IhV"/>
+                        <outlet property="wrong1Label" destination="Ub4-qm-dHn" id="Rki-nK-QeB"/>
                         <outlet property="wrong2AnswerTextField" destination="jsr-5T-t60" id="VO5-yl-lsx"/>
+                        <outlet property="wrong2Label" destination="7hx-h9-kvB" id="qrD-cP-FEs"/>
                         <outlet property="wrong3AnswerTextField" destination="VrX-qA-YSJ" id="Hm2-dk-LtR"/>
+                        <outlet property="wrong3Label" destination="Uw5-Qa-UH0" id="gM2-Sn-F1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RP-8t-1oN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -530,6 +589,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowtriangle.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="3">
             <color red="0.97299998998641968" green="0.67799997329711914" blue="0.61599999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -544,6 +606,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

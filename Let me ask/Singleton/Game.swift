@@ -13,16 +13,25 @@ final class Game {
 
     private(set) var games: GameSession?
     private(set) var sequenceStrategy: Sequence
+    
     private(set) var score: [Record] = [] {
         didSet {
-            recordsCaretaker.save(records: self.score)
+            recordsCaretaker.saveRecords(records: self.score)
         }
     }
     
-    private let recordsCaretaker = GameCaretaker()
+    private(set) var questions: [Question] = [] {
+        didSet {
+            questionsCaretaker.saveQuestions(questions: self.questions)
+        }
+    }
+    
+    private let recordsCaretaker = RecordsCaretaker()
+    private let questionsCaretaker = QuestionCaretaker()
 
     private init() {
         self.score = self.recordsCaretaker.retrieveRecords()
+        self.questions = self.questionsCaretaker.retrieveQuestions()
         self.sequenceStrategy = .normal
     }
     
@@ -46,7 +55,11 @@ final class Game {
         self.games?.questionCount = questionCount
     }
     
-    func finishGame(username: String, percent: Double) {
+    func saveCustomQuestion(question: Question) {
+        self.questions.append(question)
+    }
+    
+    func saveAndFinishGame(username: String, percent: Double) {
         guard let games = games else { return }
         let score: Record = .init(
             score: games.score,

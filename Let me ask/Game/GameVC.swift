@@ -30,7 +30,8 @@ final class GameVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        allQuestion = QuestionStorage().questions
+        let custonQuestion = Game.shared.questions
+        allQuestion = QuestionStorage().questions + custonQuestion
         nextQuestion()
         beganGame()
     }
@@ -139,7 +140,7 @@ final class GameVC: UIViewController {
             """,
             preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Ок", style: .destructive) { _ in
-            Game.shared.finishGame(username: localScore.username, percent: percentWin)
+            Game.shared.saveAndFinishGame(username: localScore.username, percent: percentWin)
             self.dismiss(animated: true)
         }
         alertController.addAction(cancelAction)
