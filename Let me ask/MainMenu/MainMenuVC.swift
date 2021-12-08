@@ -26,6 +26,17 @@ class MainMenuVC: UIViewController {
         }
     }
     
+    private var selectQuestionsStrategy: SelectQuestionsStrategy {
+        switch Game.shared.selectQuestionsStrategy {
+        case .all:
+            return SelectQuestionsAllStrategy()
+        case .system:
+            return SelectQuestionsSystemStrategy()
+        case .custom:
+            return SelectQuestionsCustomStrategy()
+        }
+    }
+    
 // MARK: - Life cicle
     
     override func viewDidLoad() {
@@ -70,6 +81,7 @@ class MainMenuVC: UIViewController {
         case "goToGame":
             let destinationVC = segue.destination as? GameVC
             destinationVC?.sequenceQuestionStrategy = self.sequenceQuestionStrategy
+            destinationVC?.selectQuestionsStategy = self.selectQuestionsStrategy
         case "goToRate":
             break
         case "goToSettings":

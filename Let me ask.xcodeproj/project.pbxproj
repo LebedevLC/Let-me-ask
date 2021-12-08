@@ -33,6 +33,10 @@
 		464ABAF3275FBA48007AB78B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAF2275FBA48007AB78B /* Observer.swift */; };
 		46AC4D36275FD7010076C258 /* AddQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D35275FD7010076C258 /* AddQuestionVC.swift */; };
 		46AC4D38275FE5AB0076C258 /* QuestionCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D37275FE5AB0076C258 /* QuestionCaretaker.swift */; };
+		46AC4D3C2760D32B0076C258 /* SelectQuestionsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D3B2760D32B0076C258 /* SelectQuestionsStrategy.swift */; };
+		46AC4D3E2760D4C50076C258 /* SelectQuestionsAllStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D3D2760D4C50076C258 /* SelectQuestionsAllStrategy.swift */; };
+		46AC4D402760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D3F2760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift */; };
+		46AC4D422760D4E80076C258 /* SelectQuestionsCustomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D412760D4E80076C258 /* SelectQuestionsCustomStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		464ABAF2275FBA48007AB78B /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		46AC4D35275FD7010076C258 /* AddQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionVC.swift; sourceTree = "<group>"; };
 		46AC4D37275FE5AB0076C258 /* QuestionCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCaretaker.swift; sourceTree = "<group>"; };
+		46AC4D3B2760D32B0076C258 /* SelectQuestionsStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsStrategy.swift; sourceTree = "<group>"; };
+		46AC4D3D2760D4C50076C258 /* SelectQuestionsAllStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsAllStrategy.swift; sourceTree = "<group>"; };
+		46AC4D3F2760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsSystemStrategy.swift; sourceTree = "<group>"; };
+		46AC4D412760D4E80076C258 /* SelectQuestionsCustomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsCustomStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,9 +214,8 @@
 		464ABAEA275E3635007AB78B /* Strategy */ = {
 			isa = PBXGroup;
 			children = (
-				464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */,
-				464ABAED275E4451007AB78B /* SQNormalStrategy.swift */,
-				464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */,
+				46AC4D3A2760D2E00076C258 /* SelectQuestions */,
+				46AC4D392760D2CB0076C258 /* SequenceQuestion */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -229,6 +236,27 @@
 				46AC4D37275FE5AB0076C258 /* QuestionCaretaker.swift */,
 			);
 			path = AddQuestion;
+			sourceTree = "<group>";
+		};
+		46AC4D392760D2CB0076C258 /* SequenceQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */,
+				464ABAED275E4451007AB78B /* SQNormalStrategy.swift */,
+				464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */,
+			);
+			path = SequenceQuestion;
+			sourceTree = "<group>";
+		};
+		46AC4D3A2760D2E00076C258 /* SelectQuestions */ = {
+			isa = PBXGroup;
+			children = (
+				46AC4D3B2760D32B0076C258 /* SelectQuestionsStrategy.swift */,
+				46AC4D3D2760D4C50076C258 /* SelectQuestionsAllStrategy.swift */,
+				46AC4D3F2760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift */,
+				46AC4D412760D4E80076C258 /* SelectQuestionsCustomStrategy.swift */,
+			);
+			path = SelectQuestions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +340,11 @@
 				463D87FA2756B5600025922A /* GameVC.swift in Sources */,
 				46AC4D36275FD7010076C258 /* AddQuestionVC.swift in Sources */,
 				464ABAE9275E344E007AB78B /* SettingsVC.swift in Sources */,
+				46AC4D402760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift in Sources */,
 				463D880B275A5E8D0025922A /* DateFormatter.swift in Sources */,
+				46AC4D422760D4E80076C258 /* SelectQuestionsCustomStrategy.swift in Sources */,
 				46AC4D38275FE5AB0076C258 /* QuestionCaretaker.swift in Sources */,
+				46AC4D3C2760D32B0076C258 /* SelectQuestionsStrategy.swift in Sources */,
 				463D87D527568F770025922A /* AppDelegate.swift in Sources */,
 				463D8807275A52520025922A /* RateTableViewCell.swift in Sources */,
 				463D87F32756B2EB0025922A /* QuestionStorage.swift in Sources */,
@@ -322,6 +353,7 @@
 				464ABAE3275BD1B2007AB78B /* MainGradiendView.swift in Sources */,
 				463D87FF2757DB2B0025922A /* GameSession.swift in Sources */,
 				464ABAEC275E3660007AB78B /* SequenceQuestionStrategy.swift in Sources */,
+				46AC4D3E2760D4C50076C258 /* SelectQuestionsAllStrategy.swift in Sources */,
 				463D8801275A36320025922A /* Record.swift in Sources */,
 				464ABAEE275E4451007AB78B /* SQNormalStrategy.swift in Sources */,
 				463D87FD2757DABA0025922A /* Game.swift in Sources */,

@@ -13,6 +13,7 @@ final class Game {
 
     private(set) var games: GameSession?
     private(set) var sequenceStrategy: Sequence
+    private(set) var selectQuestionsStrategy: SelectQuestions
     
     private(set) var score: [Record] = [] {
         didSet {
@@ -33,6 +34,7 @@ final class Game {
         self.score = self.recordsCaretaker.retrieveRecords()
         self.questions = self.questionsCaretaker.retrieveQuestions()
         self.sequenceStrategy = .normal
+        self.selectQuestionsStrategy = .all
     }
     
     func addGame(_ game: GameSession) {
@@ -41,6 +43,10 @@ final class Game {
     
     func selectStrategy(sequence: Sequence) {
         self.sequenceStrategy = sequence
+    }
+    
+    func selectSelctQuestionsStrategy(order: SelectQuestions) {
+        self.selectQuestionsStrategy = order
     }
 
     func clearGame() {

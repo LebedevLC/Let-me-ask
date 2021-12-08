@@ -27,11 +27,11 @@ final class GameVC: UIViewController {
     private var observableSelectQuestion = Observable<Int>(0)
     
     var sequenceQuestionStrategy: SequenceQuestionStrategy?
+    var selectQuestionsStategy: SelectQuestionsStrategy?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let custonQuestion = Game.shared.questions
-        allQuestion = QuestionStorage().questions + custonQuestion
+        allQuestion = selectQuestionsStategy!.giveMeQuestions()
         nextQuestion()
         beganGame()
     }

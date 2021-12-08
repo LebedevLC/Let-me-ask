@@ -63,7 +63,7 @@ class AddQuestionVC: UIViewController {
     }
     
     @IBAction func clearButtonTapped(_ sender: UIButton) {
-//        clearTextFields()
+        clearTextFields()
         debugPrint(Game.shared.questions)
     }
     

@@ -144,15 +144,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YIw-xT-exv">
-                                <rect key="frame" x="62.5" y="405.5" width="289" height="32"/>
-                                <segments>
-                                    <segment title="Последовательном"/>
-                                    <segment title="Случайном"/>
-                                </segments>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq7-7p-HRD">
-                                <rect key="frame" x="61.5" y="345" width="291.5" height="20.5"/>
+                                <rect key="frame" x="61.5" y="309" width="291.5" height="20.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="В каком порядке задавать вопросы?">
                                         <attributes>
@@ -164,24 +157,61 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f81-xR-34F">
+                                <rect key="frame" x="24" y="507.5" width="366" height="32"/>
+                                <segments>
+                                    <segment title="Все"/>
+                                    <segment title="Стандартные"/>
+                                    <segment title="Пользователя"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnZ-Y3-FdZ">
+                                <rect key="frame" x="104.5" y="451" width="205.5" height="20.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Какие задавать вопросы?">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YIw-xT-exv">
+                                <rect key="frame" x="24" y="365.5" width="366" height="32"/>
+                                <segments>
+                                    <segment title="Последовательном"/>
+                                    <segment title="Случайном"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RpB-11-eNQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YIw-xT-exv" firstAttribute="centerY" secondItem="tEl-Ws-vib" secondAttribute="centerY" id="Dkk-ah-goc"/>
+                            <constraint firstItem="f81-xR-34F" firstAttribute="top" secondItem="fnZ-Y3-FdZ" secondAttribute="bottom" constant="36" id="3W2-Ct-GTR"/>
+                            <constraint firstItem="fnZ-Y3-FdZ" firstAttribute="centerX" secondItem="tEl-Ws-vib" secondAttribute="centerX" id="8sZ-Cn-WUG"/>
+                            <constraint firstItem="RpB-11-eNQ" firstAttribute="trailing" secondItem="f81-xR-34F" secondAttribute="trailing" constant="24" id="A6d-D2-giE"/>
+                            <constraint firstItem="YIw-xT-exv" firstAttribute="centerY" secondItem="tEl-Ws-vib" secondAttribute="centerY" constant="-40" id="Dkk-ah-goc"/>
+                            <constraint firstItem="RpB-11-eNQ" firstAttribute="trailing" secondItem="YIw-xT-exv" secondAttribute="trailing" constant="24" id="Dw2-lM-iv7"/>
+                            <constraint firstItem="f81-xR-34F" firstAttribute="centerX" secondItem="tEl-Ws-vib" secondAttribute="centerX" id="I2Q-Hd-dBv"/>
                             <constraint firstItem="eq7-7p-HRD" firstAttribute="centerX" secondItem="tEl-Ws-vib" secondAttribute="centerX" id="LbI-zJ-5oO"/>
-                            <constraint firstItem="YIw-xT-exv" firstAttribute="top" secondItem="eq7-7p-HRD" secondAttribute="bottom" constant="40" id="bi5-vr-tqs"/>
+                            <constraint firstItem="fnZ-Y3-FdZ" firstAttribute="centerY" secondItem="tEl-Ws-vib" secondAttribute="centerY" constant="40" id="a6A-uC-0Nq"/>
+                            <constraint firstItem="YIw-xT-exv" firstAttribute="top" secondItem="eq7-7p-HRD" secondAttribute="bottom" constant="36" id="bi5-vr-tqs"/>
+                            <constraint firstItem="f81-xR-34F" firstAttribute="leading" secondItem="tEl-Ws-vib" secondAttribute="leading" constant="24" id="g3l-gG-4aM"/>
                             <constraint firstItem="YIw-xT-exv" firstAttribute="centerX" secondItem="tEl-Ws-vib" secondAttribute="centerX" id="gHd-f8-rGk"/>
+                            <constraint firstItem="YIw-xT-exv" firstAttribute="leading" secondItem="RpB-11-eNQ" secondAttribute="leading" constant="24" id="ldC-aR-xb7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Deb-vv-SIu"/>
                     <connections>
+                        <outlet property="selectQuestionsSegmentControl" destination="f81-xR-34F" id="dwe-7G-b7e"/>
                         <outlet property="sequenceQuestionSegmetControl" destination="YIw-xT-exv" id="U1z-DH-t28"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCR-rY-QIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1508" y="-723"/>
+            <point key="canvasLocation" x="1507.2463768115942" y="-723.21428571428567"/>
         </scene>
         <!--Таблица рейтинга-->
         <scene sceneID="Xbc-Ra-OfT">
