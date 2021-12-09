@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461FEDDF27623B31008FF31A /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FEDDE27623B31008FF31A /* ExtensionUIColor.swift */; };
+		461FEDE127623DD8008FF31A /* NewQuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FEDE027623DD8008FF31A /* NewQuestionBuilder.swift */; };
 		463D87D527568F770025922A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D427568F770025922A /* AppDelegate.swift */; };
 		463D87D727568F770025922A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D627568F770025922A /* SceneDelegate.swift */; };
 		463D87D927568F770025922A /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D827568F770025922A /* MainMenuVC.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		461FEDDE27623B31008FF31A /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		461FEDE027623DD8008FF31A /* NewQuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionBuilder.swift; sourceTree = "<group>"; };
 		463D87D127568F770025922A /* Let me ask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let me ask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		463D87D427568F770025922A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		463D87D627568F770025922A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 			children = (
 				464ABAF2275FBA48007AB78B /* Observer.swift */,
 				463D880A275A5E8D0025922A /* DateFormatter.swift */,
+				461FEDDE27623B31008FF31A /* ExtensionUIColor.swift */,
 			);
 			path = Librarys;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			children = (
 				46AC4D35275FD7010076C258 /* AddQuestionVC.swift */,
 				46AC4D37275FE5AB0076C258 /* QuestionCaretaker.swift */,
+				461FEDE027623DD8008FF31A /* NewQuestionBuilder.swift */,
 			);
 			path = AddQuestion;
 			sourceTree = "<group>";
@@ -353,7 +359,9 @@
 				464ABAE3275BD1B2007AB78B /* MainGradiendView.swift in Sources */,
 				463D87FF2757DB2B0025922A /* GameSession.swift in Sources */,
 				464ABAEC275E3660007AB78B /* SequenceQuestionStrategy.swift in Sources */,
+				461FEDDF27623B31008FF31A /* ExtensionUIColor.swift in Sources */,
 				46AC4D3E2760D4C50076C258 /* SelectQuestionsAllStrategy.swift in Sources */,
+				461FEDE127623DD8008FF31A /* NewQuestionBuilder.swift in Sources */,
 				463D8801275A36320025922A /* Record.swift in Sources */,
 				464ABAEE275E4451007AB78B /* SQNormalStrategy.swift in Sources */,
 				463D87FD2757DABA0025922A /* Game.swift in Sources */,

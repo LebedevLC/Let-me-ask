@@ -49,17 +49,19 @@ class AddQuestionVC: UIViewController {
             showAlert(isCorrect: false)
             return
         }
-        customQuestion.append(.init(
-            question: question,
-            answerRight: rightAnswer,
-            answer1: wrongAnswer1,
-            answer2: wrongAnswer2,
-            answer3: wrongAnswer3))
+        let builder = NewQuestionBuilder()
+        builder.setQuestion(question)
+        builder.setanswerRight(rightAnswer)
+        builder.setAnswer1(wrongAnswer1)
+        builder.setAnswer2(wrongAnswer2)
+        builder.setAnswer3(wrongAnswer3)
+        customQuestion.append(builder.build())
         clearTextFields()
         showAlert(isCorrect: true)
         debugPrint(customQuestion)
         guard let customQuestion = customQuestion.last else { return }
         Game.shared.saveCustomQuestion(question: customQuestion)
+        
     }
     
     @IBAction func clearButtonTapped(_ sender: UIButton) {
@@ -109,27 +111,25 @@ extension AddQuestionVC {
 extension AddQuestionVC {
     
     private func paintMyLabels() {
-        let greenColor = UIColor(red: 0.165, green: 0.565, blue: 0.200, alpha: 1)
-
-        let rightAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: greenColor]
+        let rightAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.customGreen]
         let wrongAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.red]
         let blackAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.black]
 
-        let firstString = NSMutableAttributedString(string: "Введите ", attributes: blackAttributes)
-        let secondString = NSMutableAttributedString(string: "Введите ", attributes: blackAttributes)
+        let rightString = NSMutableAttributedString(string: "Введите ", attributes: blackAttributes)
+        let wrongString = NSMutableAttributedString(string: "Введите ", attributes: blackAttributes)
         let rightWord = NSAttributedString(string: "верный ", attributes: rightAttributes)
         let wrongWord = NSAttributedString(string: "неверный ", attributes: wrongAttributes)
         let thirdWord = NSAttributedString(string: "ответ", attributes: blackAttributes)
 
-        firstString.append(rightWord)
-        firstString.append(thirdWord)
+        rightString.append(rightWord)
+        rightString.append(thirdWord)
         
-        secondString.append(wrongWord)
-        secondString.append(thirdWord)
+        wrongString.append(wrongWord)
+        wrongString.append(thirdWord)
         
-        rightLabel.attributedText = firstString
-        wrong1Label.attributedText = secondString
-        wrong2Label.attributedText = secondString
-        wrong3Label.attributedText = secondString
+        rightLabel.attributedText = rightString
+        wrong1Label.attributedText = wrongString
+        wrong2Label.attributedText = wrongString
+        wrong3Label.attributedText = wrongString
     }
 }
