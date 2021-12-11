@@ -574,15 +574,30 @@
                                     <constraint firstItem="bBm-ny-S6R" firstAttribute="top" secondItem="bOf-SW-SSC" secondAttribute="top" id="vrc-FV-fXO"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6z-4I-viv" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6z-4I-viv" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
                                 <rect key="frame" x="157" y="416" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="7ZF-7R-nBB"/>
                                     <constraint firstAttribute="height" constant="40" id="w3O-0S-eZt"/>
                                 </constraints>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" image="phone.circle.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="helpButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="v3O-5y-Cvc"/>
+                                    <action selector="callFriendButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="jva-BT-tbB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaE-61-PB0" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                <rect key="frame" x="261" y="416" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pFN-Mk-6Mz"/>
+                                    <constraint firstAttribute="width" constant="100" id="rsB-1g-hgC"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" image="circle.lefthalf.filled" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="halfQuestionButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="lNA-Ly-hmp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 3 из 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aai-Ud-Wgd">
@@ -591,6 +606,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld9-ho-NZ7" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                <rect key="frame" x="53" y="416" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3gR-FF-MQS"/>
+                                    <constraint firstAttribute="height" constant="40" id="fbn-fn-6zD"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.3.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="auditoryHelpButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="VGg-q1-t77"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zuu-DV-cIe"/>
                         <color key="backgroundColor" name="4"/>
@@ -599,12 +626,16 @@
                             <constraint firstItem="aai-Ud-Wgd" firstAttribute="leading" secondItem="zuu-DV-cIe" secondAttribute="leading" constant="24" id="7lQ-nM-FbX"/>
                             <constraint firstItem="zuu-DV-cIe" firstAttribute="bottom" secondItem="bOf-SW-SSC" secondAttribute="bottom" constant="16" id="8n5-5Z-hwT"/>
                             <constraint firstItem="m6z-4I-viv" firstAttribute="centerX" secondItem="xyl-Z4-GzL" secondAttribute="centerX" id="IZT-D2-vHQ"/>
+                            <constraint firstItem="FaE-61-PB0" firstAttribute="leading" secondItem="m6z-4I-viv" secondAttribute="trailing" constant="4" id="K5e-Ft-5te"/>
                             <constraint firstItem="zuu-DV-cIe" firstAttribute="trailing" secondItem="zqz-OL-0xn" secondAttribute="trailing" constant="8" id="NLs-dQ-qaH"/>
                             <constraint firstItem="bOf-SW-SSC" firstAttribute="centerX" secondItem="xyl-Z4-GzL" secondAttribute="centerX" id="Qg9-L7-GI1"/>
                             <constraint firstItem="zuu-DV-cIe" firstAttribute="trailing" secondItem="aai-Ud-Wgd" secondAttribute="trailing" constant="24" id="TuG-6E-bcc"/>
                             <constraint firstItem="zqz-OL-0xn" firstAttribute="leading" secondItem="zuu-DV-cIe" secondAttribute="leading" constant="8" id="bat-Rz-eJI"/>
                             <constraint firstItem="bOf-SW-SSC" firstAttribute="top" secondItem="m6z-4I-viv" secondAttribute="bottom" constant="40" id="ere-Tb-3Ql"/>
+                            <constraint firstItem="ld9-ho-NZ7" firstAttribute="centerY" secondItem="m6z-4I-viv" secondAttribute="centerY" id="ghK-iU-iQj"/>
                             <constraint firstItem="zqz-OL-0xn" firstAttribute="top" secondItem="aai-Ud-Wgd" secondAttribute="bottom" constant="16" id="nMo-x2-R1f"/>
+                            <constraint firstItem="FaE-61-PB0" firstAttribute="centerY" secondItem="m6z-4I-viv" secondAttribute="centerY" id="p7z-qX-lJp"/>
+                            <constraint firstItem="m6z-4I-viv" firstAttribute="leading" secondItem="ld9-ho-NZ7" secondAttribute="trailing" constant="4" id="pFJ-bV-nGn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ofd-kk-cma"/>
@@ -613,6 +644,9 @@
                         <outlet property="answer2Button" destination="bBm-ny-S6R" id="wur-WV-Zi2"/>
                         <outlet property="answer3Button" destination="vVR-ad-zyL" id="Irb-ad-j3V"/>
                         <outlet property="answer4Button" destination="Efr-pF-SFE" id="uTa-2t-dGz"/>
+                        <outlet property="auditoryHelpButton" destination="ld9-ho-NZ7" id="UqP-Dx-LWz"/>
+                        <outlet property="callFriendHelpButton" destination="m6z-4I-viv" id="sdX-b6-icy"/>
+                        <outlet property="halfQuestionHelpButton" destination="FaE-61-PB0" id="1ci-Ln-gbd"/>
                         <outlet property="questionLabel" destination="zqz-OL-0xn" id="PaD-hV-nE4"/>
                         <outlet property="statusLabel" destination="aai-Ud-Wgd" id="uWq-uf-uSI"/>
                     </connections>
@@ -624,8 +658,11 @@
     </scenes>
     <resources>
         <image name="arrowtriangle.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="circle.lefthalf.filled" catalog="system" width="128" height="121"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="phone.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="3">
             <color red="0.97299998998641968" green="0.67799997329711914" blue="0.61599999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

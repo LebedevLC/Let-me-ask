@@ -11,7 +11,7 @@ final class Game {
 
     static let shared = Game()
 
-    private(set) var games: GameSession?
+    private(set) var game: GameSession?
     private(set) var sequenceStrategy: Sequence
     private(set) var selectQuestionsStrategy: SelectQuestions
     
@@ -38,7 +38,7 @@ final class Game {
     }
     
     func addGame(_ game: GameSession) {
-        self.games = game
+        self.game = game
     }
     
     func selectStrategy(sequence: Sequence) {
@@ -50,15 +50,26 @@ final class Game {
     }
 
     func clearGame() {
-        self.games = nil
+        self.game = nil
     }
     
     func incrementScore() {
-        self.games?.score += 1
+        self.game?.score += 1
+    }
+    
+    func usedHelp(help: MyHelps) {
+        switch help {
+        case .auditory:
+            self.game?.isUsedAuditoryHelp = true
+        case .halfQuestion:
+            self.game?.isUsedHalfQuestionHelp = true
+        case .callFriend:
+            self.game?.isUsedCallFriendHelp = true
+        }
     }
     
     func setupQuestionCount(questionCount: Int) {
-        self.games?.questionCount = questionCount
+        self.game?.questionCount = questionCount
     }
     
     func saveCustomQuestion(question: Question) {
@@ -66,7 +77,7 @@ final class Game {
     }
     
     func saveAndFinishGame(username: String, percent: Double) {
-        guard let games = games else { return }
+        guard let games = game else { return }
         let score: Record = .init(
             score: games.score,
             questionCount: games.questionCount,

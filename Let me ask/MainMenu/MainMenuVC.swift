@@ -67,7 +67,13 @@ class MainMenuVC: UIViewController {
     
     func letsGo(name: String) {
         let game: GameSession
-        game = GameSession(score: 0, questionCount: 0, username: name)
+        game = GameSession(
+            score: 0,
+            questionCount: 0,
+            username: name,
+            isUsedAuditoryHelp: false,
+            isUsedHalfQuestionHelp: false,
+            isUsedCallFriendHelp: false)
         Game.shared.addGame(game)
         performSegue(withIdentifier: "goToGame", sender: nil)
     }

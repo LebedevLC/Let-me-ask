@@ -34,31 +34,13 @@ class AddQuestionVC: UIViewController {
     }
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        guard
-            let question = questionTextField.text,
-            let rightAnswer = rightAnswerTextField.text,
-            let wrongAnswer1 = wrong1AnswerTextField.text,
-            let wrongAnswer2 = wrong2AnswerTextField.text,
-            let wrongAnswer3 = wrong3AnswerTextField.text,
-            question != "",
-            rightAnswer != "",
-            wrongAnswer1 != "",
-            wrongAnswer2 != "",
-            wrongAnswer3 != ""
-        else {
+        guard checkTextFields() else {
             showAlert(isCorrect: false)
             return
         }
-        let builder = NewQuestionBuilder()
-        builder.setQuestion(question)
-        builder.setanswerRight(rightAnswer)
-        builder.setAnswer1(wrongAnswer1)
-        builder.setAnswer2(wrongAnswer2)
-        builder.setAnswer3(wrongAnswer3)
-        customQuestion.append(builder.build())
+        customQuestion.append(buildQuestion())
         clearTextFields()
         showAlert(isCorrect: true)
-        debugPrint(customQuestion)
         guard let customQuestion = customQuestion.last else { return }
         Game.shared.saveCustomQuestion(question: customQuestion)
         
@@ -67,6 +49,28 @@ class AddQuestionVC: UIViewController {
     @IBAction func clearButtonTapped(_ sender: UIButton) {
         clearTextFields()
         debugPrint(Game.shared.questions)
+    }
+    
+    private func checkTextFields() -> Bool {
+        if
+            questionTextField.text != "",
+            rightAnswerTextField.text != "",
+            wrong1AnswerTextField.text != "",
+            wrong2AnswerTextField.text != "",
+            wrong3AnswerTextField.text != ""
+        {
+            return true
+        } else { return false }
+    }
+    
+    private func buildQuestion() -> Question {
+        let builder = NewQuestionBuilder()
+        builder.setQuestion(questionTextField.text!)
+        builder.setanswerRight(rightAnswerTextField.text!)
+        builder.setAnswer1(wrong1AnswerTextField.text!)
+        builder.setAnswer2(wrong2AnswerTextField.text!)
+        builder.setAnswer3(wrong3AnswerTextField.text!)
+        return builder.build()
     }
     
     private func clearTextFields() {

@@ -13,23 +13,23 @@ class QuestionStorage {
     
     init() {
         questions = [
-            Question(question: "2+2=?", answerRight: "4", answer1: "01", answer2: "02", answer3: "03"),
-            Question(question: "2+3=?", answerRight: "5", answer1: "11", answer2: "12", answer3: "13"),
-            Question(question: "2+4=?", answerRight: "6", answer1: "21", answer2: "22", answer3: "23"),
-            Question(question: "2+5=?", answerRight: "7", answer1: "31", answer2: "32", answer3: "33"),
-            Question(question: "2+6=?", answerRight: "8", answer1: "41", answer2: "42", answer3: "43"),
+//            Question(question: "2+2=?", answerRight: "4", answer1: "01", answer2: "02", answer3: "03"),
+//            Question(question: "2+3=?", answerRight: "5", answer1: "11", answer2: "12", answer3: "13"),
+//            Question(question: "2+4=?", answerRight: "6", answer1: "21", answer2: "22", answer3: "23"),
+//            Question(question: "2+5=?", answerRight: "7", answer1: "31", answer2: "32", answer3: "33"),
+//            Question(question: "2+6=?", answerRight: "8", answer1: "41", answer2: "42", answer3: "43"),
             
-//            Question(question: "Какая пища составляет почти весь (около 99%) рацион большой панды?",
-//                     answerRight: "Бамбук",
-//                     answer1: "Тросник",
-//                     answer2: "Корм для панд",
-//                     answer3: "Морковь"),
-//
-//            Question(question: "Как называется фобия, которая заключается в необъяснимом страхе перед пауками?",
-//                     answerRight: "Арахнофобия",
-//                     answer1: "Эйсоптрофобия",
-//                     answer2: "Атихифобия",
-//                     answer3: "Агорафобия"),
+            Question(question: "Какая пища составляет почти весь (около 99%) рацион большой панды?",
+                     answerRight: "Бамбук",
+                     answer1: "Тросник",
+                     answer2: "Корм для панд",
+                     answer3: "Морковь"),
+
+            Question(question: "Как называется фобия, которая заключается в необъяснимом страхе перед пауками?",
+                     answerRight: "Арахнофобия",
+                     answer1: "Эйсоптрофобия",
+                     answer2: "Атихифобия",
+                     answer3: "Агорафобия"),
 //
 //            Question(question: "Кто является самым крупным представителем семейства кошачьих?",
 //                     answerRight: "Тигр",

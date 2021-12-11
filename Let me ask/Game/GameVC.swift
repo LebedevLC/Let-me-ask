@@ -17,13 +17,17 @@ final class GameVC: UIViewController {
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4Button: UIButton!
     
+    @IBOutlet weak var auditoryHelpButton: UIButton!
+    @IBOutlet weak var callFriendHelpButton: UIButton!
+    @IBOutlet weak var halfQuestionHelpButton: UIButton!
+    
     private var allQuestion: [Question] = []
     private var selectQuestion = -1 {
         didSet {
             self.observableSelectQuestion.value += 1
         }
     }
-    
+    private var isDisableHalfButtons = false
     private var observableSelectQuestion = Observable<Int>(0)
     
     var sequenceQuestionStrategy: SequenceQuestionStrategy?
@@ -38,8 +42,22 @@ final class GameVC: UIViewController {
     
     // MARK: - Кнопки
     
-    @IBAction func helpButtonTapped(_ sender: UIButton) {
-        nextQuestion()
+    @IBAction func auditoryHelpButtonTapped(_ sender: UIButton) {
+        auditoryAlert()
+        Game.shared.usedHelp(help: .auditory)
+        auditoryHelpButton.isEnabled = false
+    }
+    
+    @IBAction func halfQuestionButtonTapped(_ sender: UIButton) {
+        halfQuestionHide()
+        Game.shared.usedHelp(help: .halfQuestion)
+        halfQuestionHelpButton.isEnabled = false
+    }
+    
+    @IBAction func callFriendButtonTapped(_ sender: UIButton) {
+        callToFriend()
+        Game.shared.usedHelp(help: .callFriend)
+        callFriendHelpButton.isEnabled = false
     }
     
     @IBAction func answer1ButtonTapped(_ sender: UIButton) {
@@ -70,10 +88,10 @@ final class GameVC: UIViewController {
             self,
             options: [.new, .initial],
             closure: { [weak self] (selectQuestion, _) in
-            guard let self = self else { return }
-            self.statusLabel.text = "Вопрос \(selectQuestion) из \(allQuestionCount)"
-        })
-}
+                guard let self = self else { return }
+                self.statusLabel.text = "Вопрос \(selectQuestion) из \(allQuestionCount)"
+            })
+    }
     
     /// Реализация стратегии
     private func nextQuestion() {
@@ -92,6 +110,10 @@ final class GameVC: UIViewController {
     private func presentQuestion(questionNumber: Int) {
         let randRightAnswer = Int.random(in: 0..<4)
         var buttons = [answer1Button, answer2Button, answer3Button, answer4Button]
+        if isDisableHalfButtons {
+            let _ = buttons.map{$0?.isEnabled = true}
+            isDisableHalfButtons.toggle()
+        }
         let answer = [allQuestion[questionNumber].answer1, allQuestion[questionNumber].answer2, allQuestion[questionNumber].answer3]
         
         questionLabel.text = allQuestion[questionNumber].question
@@ -108,7 +130,7 @@ final class GameVC: UIViewController {
     private func rightAnswer() {
         Game.shared.incrementScore()
         guard
-            let score = Game.shared.games?.score,
+            let score = Game.shared.game?.score,
             score >= allQuestion.count
         else {
             nextQuestion()
@@ -117,7 +139,7 @@ final class GameVC: UIViewController {
         showAlert(isWin: true)
     }
     
-    /// Конец игры
+    /// Конец игры (проигрыш)
     private func finishGame() {
         showAlert(isWin: false)
     }
@@ -128,7 +150,7 @@ final class GameVC: UIViewController {
         isWin ? (myTitle = "Вы выиграли! Ура!") : (myTitle = "Вы проиграли!")
         guard
             allQuestion.count != 0,
-            let localScore = Game.shared.games
+            let localScore = Game.shared.game
         else { return }
         let percentWin = ((Double(localScore.score) / Double(allQuestion.count)) * 100).rounded()
         let alertController = UIAlertController(
@@ -142,6 +164,76 @@ final class GameVC: UIViewController {
         let cancelAction = UIAlertAction(title: "Ок", style: .destructive) { _ in
             Game.shared.saveAndFinishGame(username: localScore.username, percent: percentWin)
             self.dismiss(animated: true)
+        }
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: {})
+    }
+}
+
+// MARK: - Логика подсказок
+
+extension GameVC {
+    
+    private func auditoryAlert() {
+        let answerRightPercent = Int.random(in: 0...60)
+        let answerWrong1Percent = Int.random(in: 0..<(100 - answerRightPercent))
+        let answerWrong2Percent = Int.random(in: 0..<(100 - (answerRightPercent + answerWrong1Percent)))
+        let answerWrong3Percent = 100 - (answerWrong2Percent + answerWrong1Percent + answerRightPercent)
+        let buttonsTitle = [
+            answer1Button.titleLabel?.text ?? "",
+            answer2Button.titleLabel?.text ?? "",
+            answer3Button.titleLabel?.text ?? "",
+            answer4Button.titleLabel?.text ?? ""
+        ]
+        let alertController = UIAlertController(
+            title: "Аудитория пришла к таким выводам: ",
+            message: """
+            \(buttonsTitle[0]) = \(answerRightPercent)%
+            \(buttonsTitle[1]) = \(answerWrong1Percent)%
+            \(buttonsTitle[2]) = \(answerWrong2Percent)%
+            \(buttonsTitle[3]) = \(answerWrong3Percent)%
+            """,
+            preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Ок", style: .destructive) { _ in
+        }
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: {})
+    }
+}
+
+extension GameVC {
+    
+    private func halfQuestionHide() {
+        let buttons = [answer1Button, answer2Button, answer3Button, answer4Button]
+        var wrongButtons = buttons.filter{$0?.titleLabel?.text != allQuestion[selectQuestion].answerRight}
+        wrongButtons.remove(at: Int.random(in: 0...2))
+        let _ = wrongButtons.map{$0?.isEnabled = false}
+        isDisableHalfButtons = true
+    }
+}
+
+extension GameVC {
+    
+    private func callToFriend() {
+        let answers = [
+            allQuestion[selectQuestion].answerRight,
+            // для увеличения вероятности правильного ответа
+            // добавляю несколько элеметнов правильного ответа
+            allQuestion[selectQuestion].answerRight,
+            allQuestion[selectQuestion].answerRight,
+            allQuestion[selectQuestion].answerRight,
+            allQuestion[selectQuestion].answer1,
+            allQuestion[selectQuestion].answer2,
+            allQuestion[selectQuestion].answer3]
+        let friendAnsweer = answers[Int.random(in: 0..<answers.count)]
+        let alertController = UIAlertController(
+            title: "Друг из паралельной вселенной \(Game.shared.game!.username) говорит: ",
+            message: """
+            Я думаю, что правильный ответ
+            \(friendAnsweer)
+            """,
+            preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Ок", style: .destructive) { _ in
         }
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: {})
