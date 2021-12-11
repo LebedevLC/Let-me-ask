@@ -57,17 +57,6 @@ final class Game {
         self.game?.score += 1
     }
     
-    func usedHelp(help: MyHelps) {
-        switch help {
-        case .auditory:
-            self.game?.isUsedAuditoryHelp = true
-        case .halfQuestion:
-            self.game?.isUsedHalfQuestionHelp = true
-        case .callFriend:
-            self.game?.isUsedCallFriendHelp = true
-        }
-    }
-    
     func setupQuestionCount(questionCount: Int) {
         self.game?.questionCount = questionCount
     }

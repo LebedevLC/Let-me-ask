@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		461FEDDF27623B31008FF31A /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FEDDE27623B31008FF31A /* ExtensionUIColor.swift */; };
 		461FEDE127623DD8008FF31A /* NewQuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FEDE027623DD8008FF31A /* NewQuestionBuilder.swift */; };
+		461FEDE4276542F9008FF31A /* HintsFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FEDE3276542F9008FF31A /* HintsFacade.swift */; };
 		463D87D527568F770025922A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D427568F770025922A /* AppDelegate.swift */; };
 		463D87D727568F770025922A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D627568F770025922A /* SceneDelegate.swift */; };
 		463D87D927568F770025922A /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D827568F770025922A /* MainMenuVC.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		461FEDDE27623B31008FF31A /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		461FEDE027623DD8008FF31A /* NewQuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionBuilder.swift; sourceTree = "<group>"; };
+		461FEDE3276542F9008FF31A /* HintsFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsFacade.swift; sourceTree = "<group>"; };
 		463D87D127568F770025922A /* Let me ask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let me ask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		463D87D427568F770025922A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		463D87D627568F770025922A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		461FEDE2276542D2008FF31A /* GameHints */ = {
+			isa = PBXGroup;
+			children = (
+				461FEDE3276542F9008FF31A /* HintsFacade.swift */,
+			);
+			path = GameHints;
+			sourceTree = "<group>";
+		};
 		463D87C827568F770025922A = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 				463D87F42756B40F0025922A /* MainMenu */,
 				464ABAE7275E3421007AB78B /* Settings */,
 				463D87F62756B4340025922A /* Game */,
+				461FEDE2276542D2008FF31A /* GameHints */,
 				463D87F52756B4270025922A /* Rating */,
 				46AC4D34275FD6DA0076C258 /* AddQuestion */,
 				463D87ED2756B1810025922A /* Models */,
@@ -357,6 +368,7 @@
 				463D87F82756B50F0025922A /* RateVC.swift in Sources */,
 				463D87D727568F770025922A /* SceneDelegate.swift in Sources */,
 				464ABAE3275BD1B2007AB78B /* MainGradiendView.swift in Sources */,
+				461FEDE4276542F9008FF31A /* HintsFacade.swift in Sources */,
 				463D87FF2757DB2B0025922A /* GameSession.swift in Sources */,
 				464ABAEC275E3660007AB78B /* SequenceQuestionStrategy.swift in Sources */,
 				461FEDDF27623B31008FF31A /* ExtensionUIColor.swift in Sources */,

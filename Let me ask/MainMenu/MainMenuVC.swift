@@ -70,10 +70,7 @@ class MainMenuVC: UIViewController {
         game = GameSession(
             score: 0,
             questionCount: 0,
-            username: name,
-            isUsedAuditoryHelp: false,
-            isUsedHalfQuestionHelp: false,
-            isUsedCallFriendHelp: false)
+            username: name)
         Game.shared.addGame(game)
         performSegue(withIdentifier: "goToGame", sender: nil)
     }
@@ -88,6 +85,7 @@ class MainMenuVC: UIViewController {
             let destinationVC = segue.destination as? GameVC
             destinationVC?.sequenceQuestionStrategy = self.sequenceQuestionStrategy
             destinationVC?.selectQuestionsStategy = self.selectQuestionsStrategy
+            destinationVC?.hintsFacade = HintsFacade(gameVC: destinationVC!)
         case "goToRate":
             break
         case "goToSettings":
