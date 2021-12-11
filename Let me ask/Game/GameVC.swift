@@ -39,6 +39,7 @@ final class GameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         allQuestion = selectQuestionsStategy!.giveMeQuestions()
+        buttons = [answer1Button, answer2Button, answer3Button, answer4Button]
         nextQuestion()
         beganGame()
     }
@@ -84,7 +85,6 @@ final class GameVC: UIViewController {
     private func beganGame() {
         let allQuestionCount = allQuestion.count
         Game.shared.setupQuestionCount(questionCount: allQuestionCount)
-        buttons = [answer1Button, answer2Button, answer3Button, answer4Button]
         // Добавляем наблюдателя
         observableSelectQuestion.addObserver(
             self,
