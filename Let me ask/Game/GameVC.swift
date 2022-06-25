@@ -10,27 +10,58 @@ import UIKit
 final class GameVC: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     @IBOutlet weak var answer1Button: UIButton!
     @IBOutlet weak var answer2Button: UIButton!
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4Button: UIButton!
     
+    @IBOutlet weak var auditoryHelpButton: UIButton!
+    @IBOutlet weak var callFriendHelpButton: UIButton!
+    @IBOutlet weak var halfQuestionHelpButton: UIButton!
+    
     private var allQuestion: [Question] = []
-    private var selectQuestion = 0
+    private var selectQuestion = -1 {
+        didSet {
+            self.observableSelectQuestion.value += 1
+        }
+    }
+    private var observableSelectQuestion = Observable<Int>(0)
+    
+    var hintsFacade: HintsFacade?
+    var sequenceQuestionStrategy: SequenceQuestionStrategy?
+    var selectQuestionsStrategy: SelectQuestionsStrategy?
+    
+    var buttons: [UIButton] = []
+    var isDisableHalfButtons = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        allQuestion = QuestionStorage().questions
-        randomQuestion()
+        allQuestion = selectQuestionsStrategy!.giveMeQuestions()
+        buttons = [answer1Button, answer2Button, answer3Button, answer4Button]
+        nextQuestion()
         beganGame()
     }
     
-    // MARK: - Кнопки
+    // MARK: - Кнопки подсказок
     
-    @IBAction func helpButtonTapped(_ sender: UIButton) {
-        nextQuestion()
+    @IBAction func auditoryHelpButtonTapped(_ sender: UIButton) {
+        self.hintsFacade?.auditoryAlert(buttons: self.buttons)
+        auditoryHelpButton.isEnabled = false
     }
+    
+    @IBAction func halfQuestionButtonTapped(_ sender: UIButton) {
+        self.hintsFacade?.halfQuestionHide(buttons: self.buttons, selectQuestion: allQuestion[selectQuestion])
+        halfQuestionHelpButton.isEnabled = false
+    }
+    
+    @IBAction func callFriendButtonTapped(_ sender: UIButton) {
+        self.hintsFacade?.callToFriend(selectQuestion: allQuestion[selectQuestion])
+        callFriendHelpButton.isEnabled = false
+    }
+    
+    // MARK: - Кнопки ответов
     
     @IBAction func answer1ButtonTapped(_ sender: UIButton) {
         answer1Button.titleLabel?.text == allQuestion[selectQuestion].answerRight ? rightAnswer() : finishGame()
@@ -52,39 +83,49 @@ final class GameVC: UIViewController {
     
     /// Начало игры
     private func beganGame() {
-        Game.shared.setupQuestionCount(questionCount: allQuestion.count)
+        let allQuestionCount = allQuestion.count
+        Game.shared.setupQuestionCount(questionCount: allQuestionCount)
+        // Добавляем наблюдателя
+        observableSelectQuestion.addObserver(
+            self,
+            options: [.new, .initial],
+            closure: { [weak self] (selectQuestion, _) in
+                guard let self = self else { return }
+                self.statusLabel.text = "Вопрос \(selectQuestion) из \(allQuestionCount)"
+            })
     }
     
-    /// Получить случайный вопрос
-    private func randomQuestion() {
-        let rand = Int.random(in: 0..<allQuestion.count)
-        selectQuestion = rand
-        presentQuestion(questionNumber: rand)
-    }
-    
-    /// Получить следующий вопрос (без конца)
+    /// Реализация стратегии
     private func nextQuestion() {
-        if  selectQuestion + 1 >= allQuestion.count {
-            selectQuestion = 0
+        let nextSelectQuestion = sequenceQuestionStrategy!.nextQuestion(
+            selectQuestion: self.selectQuestion,
+            count: allQuestion.count)
+        if nextSelectQuestion >= 0 {
+            selectQuestion = nextSelectQuestion
+            presentQuestion(questionNumber: nextSelectQuestion)
         } else {
-            selectQuestion = selectQuestion + 1
+            showAlert(isWin: true)
         }
-        presentQuestion(questionNumber: selectQuestion)
     }
+    
     
     /// Отобразить вопрос
+    /// - Parameter questionNumber: Индекс текущего вопроса в массиве вопросов
     private func presentQuestion(questionNumber: Int) {
         let randRightAnswer = Int.random(in: 0..<4)
-        var buttons = [answer1Button, answer2Button, answer3Button, answer4Button]
-        let answer = [allQuestion[questionNumber].answer1, allQuestion[questionNumber].answer2, allQuestion[questionNumber].answer3]
-        
-        questionLabel.text = allQuestion[questionNumber].question
-        
-        buttons[randRightAnswer]?.setTitle(allQuestion[questionNumber].answerRight, for: .normal)
+        var buttons = self.buttons
+        if isDisableHalfButtons {
+            let _ = buttons.map{$0.isEnabled = true}
+            isDisableHalfButtons.toggle()
+        }
+        let selectAnswer = allQuestion[questionNumber]
+        let answers = [selectAnswer.answer1, selectAnswer.answer2, selectAnswer.answer3]
+
+        questionLabel.text = selectAnswer.question
+        buttons[randRightAnswer].setTitle(selectAnswer.answerRight, for: .normal)
         buttons.remove(at: randRightAnswer)
-        
         for i in 0..<buttons.count {
-            buttons[i]?.setTitle(answer[i], for: .normal)
+            buttons[i].setTitle(answers[i], for: .normal)
         }
     }
     
@@ -92,7 +133,7 @@ final class GameVC: UIViewController {
     private func rightAnswer() {
         Game.shared.incrementScore()
         guard
-            let score = Game.shared.games?.score,
+            let score = Game.shared.game?.score,
             score >= allQuestion.count
         else {
             nextQuestion()
@@ -101,18 +142,19 @@ final class GameVC: UIViewController {
         showAlert(isWin: true)
     }
     
-    /// Конец игры
+    /// Конец игры (проигрыш)
     private func finishGame() {
         showAlert(isWin: false)
     }
     
     /// Алерт для окончания игры
+    /// - Parameter isWin: Победа или поражение
     private func showAlert(isWin: Bool) {
         var myTitle = ""
         isWin ? (myTitle = "Вы выиграли! Ура!") : (myTitle = "Вы проиграли!")
         guard
             allQuestion.count != 0,
-            let localScore = Game.shared.games
+            let localScore = Game.shared.game
         else { return }
         let percentWin = ((Double(localScore.score) / Double(allQuestion.count)) * 100).rounded()
         let alertController = UIAlertController(
@@ -124,7 +166,7 @@ final class GameVC: UIViewController {
             """,
             preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Ок", style: .destructive) { _ in
-            Game.shared.finishGame(username: localScore.username, percent: percentWin)
+            Game.shared.saveAndFinishGame(username: localScore.username, percent: percentWin)
             self.dismiss(animated: true)
         }
         alertController.addAction(cancelAction)

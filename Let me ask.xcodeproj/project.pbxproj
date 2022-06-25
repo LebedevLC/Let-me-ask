@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461FEDDF27623B31008FF31A /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FEDDE27623B31008FF31A /* ExtensionUIColor.swift */; };
+		461FEDE127623DD8008FF31A /* NewQuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FEDE027623DD8008FF31A /* NewQuestionBuilder.swift */; };
+		461FEDE4276542F9008FF31A /* HintsFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FEDE3276542F9008FF31A /* HintsFacade.swift */; };
 		463D87D527568F770025922A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D427568F770025922A /* AppDelegate.swift */; };
 		463D87D727568F770025922A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D627568F770025922A /* SceneDelegate.swift */; };
 		463D87D927568F770025922A /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87D827568F770025922A /* MainMenuVC.swift */; };
@@ -20,15 +23,29 @@
 		463D87FD2757DABA0025922A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87FC2757DAB90025922A /* Game.swift */; };
 		463D87FF2757DB2B0025922A /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D87FE2757DB2B0025922A /* GameSession.swift */; };
 		463D8801275A36320025922A /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D8800275A36320025922A /* Record.swift */; };
-		463D8803275A44AC0025922A /* GameCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D8802275A44AC0025922A /* GameCaretaker.swift */; };
+		463D8803275A44AC0025922A /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D8802275A44AC0025922A /* RecordsCaretaker.swift */; };
 		463D8807275A52520025922A /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D8805275A52520025922A /* RateTableViewCell.swift */; };
 		463D8808275A52520025922A /* RateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463D8806275A52520025922A /* RateTableViewCell.xib */; };
 		463D880B275A5E8D0025922A /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D880A275A5E8D0025922A /* DateFormatter.swift */; };
 		464ABAE3275BD1B2007AB78B /* MainGradiendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAE2275BD1B2007AB78B /* MainGradiendView.swift */; };
 		464ABAE5275BD597007AB78B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAE4275BD597007AB78B /* MyButton.swift */; };
+		464ABAE9275E344E007AB78B /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAE8275E344E007AB78B /* SettingsVC.swift */; };
+		464ABAEC275E3660007AB78B /* SequenceQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */; };
+		464ABAEE275E4451007AB78B /* SQNormalStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAED275E4451007AB78B /* SQNormalStrategy.swift */; };
+		464ABAF0275E446F007AB78B /* SQRandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */; };
+		464ABAF3275FBA48007AB78B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ABAF2275FBA48007AB78B /* Observer.swift */; };
+		46AC4D36275FD7010076C258 /* AddQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D35275FD7010076C258 /* AddQuestionVC.swift */; };
+		46AC4D38275FE5AB0076C258 /* QuestionCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D37275FE5AB0076C258 /* QuestionCaretaker.swift */; };
+		46AC4D3C2760D32B0076C258 /* SelectQuestionsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D3B2760D32B0076C258 /* SelectQuestionsStrategy.swift */; };
+		46AC4D3E2760D4C50076C258 /* SelectQuestionsAllStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D3D2760D4C50076C258 /* SelectQuestionsAllStrategy.swift */; };
+		46AC4D402760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D3F2760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift */; };
+		46AC4D422760D4E80076C258 /* SelectQuestionsCustomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC4D412760D4E80076C258 /* SelectQuestionsCustomStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		461FEDDE27623B31008FF31A /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		461FEDE027623DD8008FF31A /* NewQuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionBuilder.swift; sourceTree = "<group>"; };
+		461FEDE3276542F9008FF31A /* HintsFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsFacade.swift; sourceTree = "<group>"; };
 		463D87D127568F770025922A /* Let me ask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let me ask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		463D87D427568F770025922A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		463D87D627568F770025922A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,12 +61,23 @@
 		463D87FC2757DAB90025922A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		463D87FE2757DB2B0025922A /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		463D8800275A36320025922A /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
-		463D8802275A44AC0025922A /* GameCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCaretaker.swift; sourceTree = "<group>"; };
+		463D8802275A44AC0025922A /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 		463D8805275A52520025922A /* RateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
 		463D8806275A52520025922A /* RateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateTableViewCell.xib; sourceTree = "<group>"; };
 		463D880A275A5E8D0025922A /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		464ABAE2275BD1B2007AB78B /* MainGradiendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGradiendView.swift; sourceTree = "<group>"; };
 		464ABAE4275BD597007AB78B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		464ABAE8275E344E007AB78B /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceQuestionStrategy.swift; sourceTree = "<group>"; };
+		464ABAED275E4451007AB78B /* SQNormalStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQNormalStrategy.swift; sourceTree = "<group>"; };
+		464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQRandomStrategy.swift; sourceTree = "<group>"; };
+		464ABAF2275FBA48007AB78B /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		46AC4D35275FD7010076C258 /* AddQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionVC.swift; sourceTree = "<group>"; };
+		46AC4D37275FE5AB0076C258 /* QuestionCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCaretaker.swift; sourceTree = "<group>"; };
+		46AC4D3B2760D32B0076C258 /* SelectQuestionsStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsStrategy.swift; sourceTree = "<group>"; };
+		46AC4D3D2760D4C50076C258 /* SelectQuestionsAllStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsAllStrategy.swift; sourceTree = "<group>"; };
+		46AC4D3F2760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsSystemStrategy.swift; sourceTree = "<group>"; };
+		46AC4D412760D4E80076C258 /* SelectQuestionsCustomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsCustomStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		461FEDE2276542D2008FF31A /* GameHints */ = {
+			isa = PBXGroup;
+			children = (
+				461FEDE3276542F9008FF31A /* HintsFacade.swift */,
+			);
+			path = GameHints;
+			sourceTree = "<group>";
+		};
 		463D87C827568F770025922A = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +119,17 @@
 			isa = PBXGroup;
 			children = (
 				463D87DA27568F770025922A /* Main.storyboard */,
+				464ABAEA275E3635007AB78B /* Strategy */,
 				463D87F42756B40F0025922A /* MainMenu */,
+				464ABAE7275E3421007AB78B /* Settings */,
 				463D87F62756B4340025922A /* Game */,
+				461FEDE2276542D2008FF31A /* GameHints */,
 				463D87F52756B4270025922A /* Rating */,
+				46AC4D34275FD6DA0076C258 /* AddQuestion */,
 				463D87ED2756B1810025922A /* Models */,
 				464ABAE6275BDCB6007AB78B /* Singleton */,
-				463D8809275A5E740025922A /* Time */,
 				463D87FB2756B7850025922A /* Fundamental */,
+				464ABAF1275FBA2D007AB78B /* Librarys */,
 				464ABAE1275BD1A0007AB78B /* Castom */,
 				463D87E82756AEA30025922A /* Resources */,
 			);
@@ -130,6 +170,7 @@
 			children = (
 				463D8804275A521D0025922A /* Cell */,
 				463D87F72756B50F0025922A /* RateVC.swift */,
+				463D8802275A44AC0025922A /* RecordsCaretaker.swift */,
 			);
 			path = Rating;
 			sourceTree = "<group>";
@@ -138,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				463D87F92756B5600025922A /* GameVC.swift */,
-				463D8802275A44AC0025922A /* GameCaretaker.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -161,14 +201,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		463D8809275A5E740025922A /* Time */ = {
-			isa = PBXGroup;
-			children = (
-				463D880A275A5E8D0025922A /* DateFormatter.swift */,
-			);
-			path = Time;
-			sourceTree = "<group>";
-		};
 		464ABAE1275BD1A0007AB78B /* Castom */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +216,64 @@
 				463D87FC2757DAB90025922A /* Game.swift */,
 			);
 			path = Singleton;
+			sourceTree = "<group>";
+		};
+		464ABAE7275E3421007AB78B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				464ABAE8275E344E007AB78B /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		464ABAEA275E3635007AB78B /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				46AC4D3A2760D2E00076C258 /* SelectQuestions */,
+				46AC4D392760D2CB0076C258 /* SequenceQuestion */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		464ABAF1275FBA2D007AB78B /* Librarys */ = {
+			isa = PBXGroup;
+			children = (
+				464ABAF2275FBA48007AB78B /* Observer.swift */,
+				463D880A275A5E8D0025922A /* DateFormatter.swift */,
+				461FEDDE27623B31008FF31A /* ExtensionUIColor.swift */,
+			);
+			path = Librarys;
+			sourceTree = "<group>";
+		};
+		46AC4D34275FD6DA0076C258 /* AddQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				46AC4D35275FD7010076C258 /* AddQuestionVC.swift */,
+				46AC4D37275FE5AB0076C258 /* QuestionCaretaker.swift */,
+				461FEDE027623DD8008FF31A /* NewQuestionBuilder.swift */,
+			);
+			path = AddQuestion;
+			sourceTree = "<group>";
+		};
+		46AC4D392760D2CB0076C258 /* SequenceQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				464ABAEB275E3660007AB78B /* SequenceQuestionStrategy.swift */,
+				464ABAED275E4451007AB78B /* SQNormalStrategy.swift */,
+				464ABAEF275E446F007AB78B /* SQRandomStrategy.swift */,
+			);
+			path = SequenceQuestion;
+			sourceTree = "<group>";
+		};
+		46AC4D3A2760D2E00076C258 /* SelectQuestions */ = {
+			isa = PBXGroup;
+			children = (
+				46AC4D3B2760D32B0076C258 /* SelectQuestionsStrategy.swift */,
+				46AC4D3D2760D4C50076C258 /* SelectQuestionsAllStrategy.swift */,
+				46AC4D3F2760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift */,
+				46AC4D412760D4E80076C258 /* SelectQuestionsCustomStrategy.swift */,
+			);
+			path = SelectQuestions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,19 +349,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				463D87D927568F770025922A /* MainMenuVC.swift in Sources */,
-				463D8803275A44AC0025922A /* GameCaretaker.swift in Sources */,
+				464ABAF3275FBA48007AB78B /* Observer.swift in Sources */,
+				463D8803275A44AC0025922A /* RecordsCaretaker.swift in Sources */,
+				464ABAF0275E446F007AB78B /* SQRandomStrategy.swift in Sources */,
 				464ABAE5275BD597007AB78B /* MyButton.swift in Sources */,
 				463D87EF2756B1940025922A /* Question.swift in Sources */,
 				463D87FA2756B5600025922A /* GameVC.swift in Sources */,
+				46AC4D36275FD7010076C258 /* AddQuestionVC.swift in Sources */,
+				464ABAE9275E344E007AB78B /* SettingsVC.swift in Sources */,
+				46AC4D402760D4DB0076C258 /* SelectQuestionsSystemStrategy.swift in Sources */,
 				463D880B275A5E8D0025922A /* DateFormatter.swift in Sources */,
+				46AC4D422760D4E80076C258 /* SelectQuestionsCustomStrategy.swift in Sources */,
+				46AC4D38275FE5AB0076C258 /* QuestionCaretaker.swift in Sources */,
+				46AC4D3C2760D32B0076C258 /* SelectQuestionsStrategy.swift in Sources */,
 				463D87D527568F770025922A /* AppDelegate.swift in Sources */,
 				463D8807275A52520025922A /* RateTableViewCell.swift in Sources */,
 				463D87F32756B2EB0025922A /* QuestionStorage.swift in Sources */,
 				463D87F82756B50F0025922A /* RateVC.swift in Sources */,
 				463D87D727568F770025922A /* SceneDelegate.swift in Sources */,
 				464ABAE3275BD1B2007AB78B /* MainGradiendView.swift in Sources */,
+				461FEDE4276542F9008FF31A /* HintsFacade.swift in Sources */,
 				463D87FF2757DB2B0025922A /* GameSession.swift in Sources */,
+				464ABAEC275E3660007AB78B /* SequenceQuestionStrategy.swift in Sources */,
+				461FEDDF27623B31008FF31A /* ExtensionUIColor.swift in Sources */,
+				46AC4D3E2760D4C50076C258 /* SelectQuestionsAllStrategy.swift in Sources */,
+				461FEDE127623DD8008FF31A /* NewQuestionBuilder.swift in Sources */,
 				463D8801275A36320025922A /* Record.swift in Sources */,
+				464ABAEE275E4451007AB78B /* SQNormalStrategy.swift in Sources */,
 				463D87FD2757DABA0025922A /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

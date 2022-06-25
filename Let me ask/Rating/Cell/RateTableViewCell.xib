@@ -17,21 +17,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="453" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ut3-eG-Xra">
-                        <rect key="frame" x="8" y="19.5" width="45" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ut3-eG-Xra">
+                        <rect key="frame" x="8" y="21" width="40.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60% (score)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-9X-JHF">
-                        <rect key="frame" x="69" y="19.5" width="95" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="64.5" y="21" width="232" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11.11.11 11:11 +0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAE-HV-fYR">
-                        <rect key="frame" x="298" y="19.5" width="147" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="11.11.11 11:11 +0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAE-HV-fYR">
+                        <rect key="frame" x="312.5" y="21" width="132.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -41,6 +41,7 @@
                     <constraint firstItem="Ut3-eG-Xra" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1A7-QJ-Mgf"/>
                     <constraint firstItem="FAE-HV-fYR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4eC-hY-Rcz"/>
                     <constraint firstItem="ehm-9X-JHF" firstAttribute="leading" secondItem="Ut3-eG-Xra" secondAttribute="trailing" constant="16" id="6IK-ut-dew"/>
+                    <constraint firstItem="FAE-HV-fYR" firstAttribute="leading" secondItem="ehm-9X-JHF" secondAttribute="trailing" constant="16" id="BDJ-dY-TFV"/>
                     <constraint firstItem="ehm-9X-JHF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="j6N-kT-rvU"/>
                     <constraint firstAttribute="trailing" secondItem="FAE-HV-fYR" secondAttribute="trailing" constant="8" id="jAU-wV-zOe"/>
                     <constraint firstItem="Ut3-eG-Xra" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="tI6-qm-ilq"/>

@@ -1,5 +1,5 @@
 //
-//  GameCaretaker.swift
+//  RecordsCaretaker.swift
 //  Let me ask
 //
 //  Created by Сергей Чумовских  on 03.12.2021.
@@ -7,37 +7,33 @@
 
 import Foundation
 
-// 2. Memento
-typealias Memento = Data
-
-// 3. Caretaker
-protocol GameCaretakerProtocol {
-    func save(records: [Record])
+protocol RecordsCaretakerProtocol {
+    func saveRecords(records: [Record])
     func retrieveRecords() -> [Record]
 }
 
-final class GameCaretaker: GameCaretakerProtocol {
+final class RecordsCaretaker: RecordsCaretakerProtocol {
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
-    private let key = "records"
-
-    func save(records: [Record]) {
+    private let keyRecords = "records"
+    
+    func saveRecords(records: [Record]) {
         do {
             let data = try self.encoder.encode(records)
-            UserDefaults.standard.set(data, forKey: key)
+            UserDefaults.standard.set(data, forKey: keyRecords)
         } catch {
-            print(error)
+            debugPrint(error.localizedDescription)
         }
     }
-
+    
     func retrieveRecords() -> [Record] {
-        guard let data = UserDefaults.standard.data(forKey: key) else {
+        guard let data = UserDefaults.standard.data(forKey: keyRecords) else {
             return []
         }
         do {
             return try self.decoder.decode([Record].self, from: data)
         } catch {
-            print(error)
+            debugPrint(error.localizedDescription)
             return []
         }
     }

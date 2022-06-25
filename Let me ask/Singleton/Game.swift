@@ -11,37 +11,62 @@ final class Game {
 
     static let shared = Game()
 
-    private(set) var games: GameSession?
+    private(set) var game: GameSession?
+    private(set) var sequenceStrategy: Sequence
+    private(set) var selectQuestionsStrategy: SelectQuestions
+    
     private(set) var score: [Record] = [] {
         didSet {
-            recordsCaretaker.save(records: self.score)
+            recordsCaretaker.saveRecords(records: self.score)
         }
     }
     
-    private let recordsCaretaker = GameCaretaker()
+    private(set) var questions: [Question] = [] {
+        didSet {
+            questionsCaretaker.saveQuestions(questions: self.questions)
+        }
+    }
+    
+    private let recordsCaretaker = RecordsCaretaker()
+    private let questionsCaretaker = QuestionCaretaker()
 
     private init() {
         self.score = self.recordsCaretaker.retrieveRecords()
+        self.questions = self.questionsCaretaker.retrieveQuestions()
+        self.sequenceStrategy = .normal
+        self.selectQuestionsStrategy = .all
     }
     
     func addGame(_ game: GameSession) {
-        self.games = game
+        self.game = game
+    }
+    
+    func selectStrategy(sequence: Sequence) {
+        self.sequenceStrategy = sequence
+    }
+    
+    func selectSelctQuestionsStrategy(order: SelectQuestions) {
+        self.selectQuestionsStrategy = order
     }
 
     func clearGame() {
-        self.games = nil
+        self.game = nil
     }
     
     func incrementScore() {
-        self.games?.score += 1
+        self.game?.score += 1
     }
     
     func setupQuestionCount(questionCount: Int) {
-        self.games?.questionCount = questionCount
+        self.game?.questionCount = questionCount
     }
     
-    func finishGame(username: String, percent: Double) {
-        guard let games = games else { return }
+    func saveCustomQuestion(question: Question) {
+        self.questions.append(question)
+    }
+    
+    func saveAndFinishGame(username: String, percent: Double) {
+        guard let games = game else { return }
         let score: Record = .init(
             score: games.score,
             questionCount: games.questionCount,

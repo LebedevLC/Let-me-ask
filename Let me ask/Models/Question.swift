@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Question {
+struct Question: Codable {
     let question: String
     let answerRight: String
     let answer1: String

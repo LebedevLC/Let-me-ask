@@ -5,7 +5,6 @@
 //  Created by Сергей Чумовских  on 04.12.2021.
 //
 
-import Foundation
 import UIKit
 
 class MainGradiendView: UIView {
