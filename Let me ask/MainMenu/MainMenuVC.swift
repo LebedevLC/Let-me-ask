@@ -84,7 +84,7 @@ class MainMenuVC: UIViewController {
         case "goToGame":
             let destinationVC = segue.destination as? GameVC
             destinationVC?.sequenceQuestionStrategy = self.sequenceQuestionStrategy
-            destinationVC?.selectQuestionsStategy = self.selectQuestionsStrategy
+            destinationVC?.selectQuestionsStrategy = self.selectQuestionsStrategy
             destinationVC?.hintsFacade = HintsFacade(gameVC: destinationVC!)
         case "goToRate":
             break

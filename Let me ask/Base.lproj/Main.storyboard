@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -222,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-4a-dMC">
-                                <rect key="frame" x="2" y="2" width="410" height="804"/>
+                                <rect key="frame" x="2" y="46" width="410" height="794"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -252,67 +252,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш вопрос" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFX-LJ-YQC">
-                                <rect key="frame" x="104.5" y="24" width="205.5" height="26.5"/>
+                                <rect key="frame" x="104.5" y="68" width="205.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите ваш вопрос" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-J0-Ntv">
-                                <rect key="frame" x="16" y="66.5" width="382" height="34"/>
+                                <rect key="frame" x="16" y="110.5" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите верный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNP-bw-dpX">
-                                <rect key="frame" x="95.5" y="124.5" width="223" height="26.5"/>
+                                <rect key="frame" x="95.5" y="168.5" width="223" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите верный ответ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eng-gv-caZ">
-                                <rect key="frame" x="16" y="167" width="382" height="34"/>
+                                <rect key="frame" x="16" y="211" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неверный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub4-qm-dHn">
-                                <rect key="frame" x="83.5" y="225" width="247" height="26.5"/>
+                                <rect key="frame" x="83.5" y="269" width="247" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите неверный ответ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AX0-Eg-pYg">
-                                <rect key="frame" x="16" y="267.5" width="382" height="34"/>
+                                <rect key="frame" x="16" y="311.5" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неверный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hx-h9-kvB">
-                                <rect key="frame" x="83.5" y="325.5" width="247" height="26.5"/>
+                                <rect key="frame" x="83.5" y="369.5" width="247" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите неверный ответ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsr-5T-t60">
-                                <rect key="frame" x="16" y="368" width="382" height="34"/>
+                                <rect key="frame" x="16" y="412" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неверный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw5-Qa-UH0">
-                                <rect key="frame" x="83.5" y="426" width="247" height="26.5"/>
+                                <rect key="frame" x="83.5" y="470" width="247" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите неверный ответ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VrX-qA-YSJ">
-                                <rect key="frame" x="16" y="468.5" width="382" height="34"/>
+                                <rect key="frame" x="16" y="512.5" width="382" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-JQ-B9h" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                <rect key="frame" x="132" y="518.5" width="150" height="37"/>
+                                <rect key="frame" x="132" y="562.5" width="150" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="j6V-7g-Yla"/>
                                 </constraints>
@@ -344,7 +344,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-dJ-rHc" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                <rect key="frame" x="132" y="571.5" width="150" height="37"/>
+                                <rect key="frame" x="132" y="615.5" width="150" height="37"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
@@ -373,7 +373,7 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-vs-75i">
-                                <rect key="frame" x="334.5" y="123.5" width="30" height="29"/>
+                                <rect key="frame" x="334.5" y="167.5" width="30" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <constraints>
@@ -382,7 +382,7 @@
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multiply.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Amk-4j-ZMc">
-                                <rect key="frame" x="346.5" y="224" width="30" height="29"/>
+                                <rect key="frame" x="346.5" y="268" width="30" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <constraints>
@@ -391,7 +391,7 @@
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multiply.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7g0-mt-bk7">
-                                <rect key="frame" x="346.5" y="324.5" width="30" height="29"/>
+                                <rect key="frame" x="346.5" y="368.5" width="30" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <constraints>
@@ -400,7 +400,7 @@
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multiply.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eXN-qy-PiF">
-                                <rect key="frame" x="346.5" y="425" width="30" height="29"/>
+                                <rect key="frame" x="346.5" y="469" width="30" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <constraints>
@@ -409,7 +409,7 @@
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ngw-2P-bSg">
-                                <rect key="frame" x="328" y="22.5" width="30" height="29.5"/>
+                                <rect key="frame" x="328" y="66.5" width="30" height="29.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.31764706970000001" green="0.69803923369999998" blue="0.8392156959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -491,6 +491,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 3 из 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aai-Ud-Wgd">
+                                <rect key="frame" x="24" y="60" width="366" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос произвольной длинны" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqz-OL-0xn">
                                 <rect key="frame" x="8" y="100" width="398" height="72"/>
                                 <constraints>
@@ -500,143 +506,128 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOf-SW-SSC">
-                                <rect key="frame" x="32" y="496" width="350" height="350"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Jx6-SW-IWR">
+                                <rect key="frame" x="32" y="399.5" width="350" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teh-kz-5ZE" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
-                                        <color key="backgroundColor" name="5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld9-ho-NZ7" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="173" id="f41-4T-06l"/>
-                                            <constraint firstAttribute="width" constant="173" id="hgu-Ri-4Ws"/>
+                                            <constraint firstAttribute="height" constant="40" id="HV6-gI-Klb"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="person.3.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="answer1ButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="iUJ-Tv-5do"/>
+                                            <action selector="auditoryHelpButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="VGg-q1-t77"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBm-ny-S6R" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                        <rect key="frame" x="177" y="0.0" width="173" height="173"/>
-                                        <color key="backgroundColor" name="3"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6z-4I-viv" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                        <rect key="frame" x="122.5" y="0.0" width="105" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="173" id="15l-1i-MEo"/>
-                                            <constraint firstAttribute="width" constant="173" id="5vH-Wt-Csc"/>
+                                            <constraint firstAttribute="height" constant="40" id="6cg-Vr-IVb"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="phone.circle.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="answer2ButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="N34-YI-w7R"/>
+                                            <action selector="callFriendButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="jva-BT-tbB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVR-ad-zyL" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="177" width="173" height="173"/>
-                                        <color key="backgroundColor" name="3"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaE-61-PB0" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                        <rect key="frame" x="245" y="0.0" width="105" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="173" id="8hD-RF-S9s"/>
-                                            <constraint firstAttribute="height" constant="173" id="jrW-gl-des"/>
+                                            <constraint firstAttribute="height" constant="40" id="bZB-ie-IuP"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="circle.lefthalf.filled" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="answer3ButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="RHf-Zo-LzF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efr-pF-SFE" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                        <rect key="frame" x="177" y="177" width="173" height="173"/>
-                                        <color key="backgroundColor" name="5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="173" id="KrY-lY-Ds9"/>
-                                            <constraint firstAttribute="height" constant="173" id="diZ-h2-cZx"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="answe4ButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="doI-Fm-Zrp"/>
+                                            <action selector="halfQuestionButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="lNA-Ly-hmp"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Efr-pF-SFE" secondAttribute="trailing" id="JIv-ft-T76"/>
-                                    <constraint firstAttribute="trailing" secondItem="bBm-ny-S6R" secondAttribute="trailing" id="MEr-Cc-FDN"/>
-                                    <constraint firstItem="vVR-ad-zyL" firstAttribute="leading" secondItem="bOf-SW-SSC" secondAttribute="leading" id="PCC-dT-zg7"/>
-                                    <constraint firstAttribute="width" constant="350" id="dG0-Oi-RKM"/>
-                                    <constraint firstAttribute="bottom" secondItem="Efr-pF-SFE" secondAttribute="bottom" id="eWh-gP-F2q"/>
-                                    <constraint firstAttribute="bottom" secondItem="vVR-ad-zyL" secondAttribute="bottom" id="lod-fD-SJe"/>
-                                    <constraint firstItem="teh-kz-5ZE" firstAttribute="leading" secondItem="bOf-SW-SSC" secondAttribute="leading" id="oBt-Yz-fu4"/>
-                                    <constraint firstAttribute="height" constant="350" id="sc6-fW-kvf"/>
-                                    <constraint firstItem="teh-kz-5ZE" firstAttribute="top" secondItem="bOf-SW-SSC" secondAttribute="top" id="tLQ-GU-jGn"/>
-                                    <constraint firstItem="bBm-ny-S6R" firstAttribute="top" secondItem="bOf-SW-SSC" secondAttribute="top" id="vrc-FV-fXO"/>
+                                    <constraint firstItem="ld9-ho-NZ7" firstAttribute="width" secondItem="Jx6-SW-IWR" secondAttribute="width" multiplier="0.3" id="3Bw-bs-eGQ"/>
+                                    <constraint firstItem="m6z-4I-viv" firstAttribute="width" secondItem="Jx6-SW-IWR" secondAttribute="width" multiplier="0.3" id="4fL-FL-XFT"/>
+                                    <constraint firstItem="FaE-61-PB0" firstAttribute="width" secondItem="Jx6-SW-IWR" secondAttribute="width" multiplier="0.3" id="I5V-ZG-dTc"/>
                                 </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6z-4I-viv" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                <rect key="frame" x="157" y="416" width="100" height="40"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="INJ-Pa-Gfk">
+                                <rect key="frame" x="32" y="471.5" width="350" height="358.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZCE-K6-oEx">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="179.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teh-kz-5ZE" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="179.5"/>
+                                                <color key="backgroundColor" name="5"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="center"/>
+                                                <connections>
+                                                    <action selector="answer1ButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="iUJ-Tv-5do"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBm-ny-S6R" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                                <rect key="frame" x="177" y="0.0" width="173" height="179.5"/>
+                                                <color key="backgroundColor" name="3"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="center"/>
+                                                <connections>
+                                                    <action selector="answer2ButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="N34-YI-w7R"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="q6B-RZ-LaX">
+                                        <rect key="frame" x="0.0" y="183.5" width="350" height="175"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVR-ad-zyL" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="175"/>
+                                                <color key="backgroundColor" name="3"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="center"/>
+                                                <connections>
+                                                    <action selector="answer3ButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="RHf-Zo-LzF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efr-pF-SFE" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
+                                                <rect key="frame" x="177" y="0.0" width="173" height="175"/>
+                                                <color key="backgroundColor" name="5"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="center"/>
+                                                <connections>
+                                                    <action selector="answe4ButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="doI-Fm-Zrp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="7ZF-7R-nBB"/>
-                                    <constraint firstAttribute="height" constant="40" id="w3O-0S-eZt"/>
+                                    <constraint firstItem="ZCE-K6-oEx" firstAttribute="height" secondItem="INJ-Pa-Gfk" secondAttribute="height" multiplier="0.5" id="LB3-0T-ap5"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="plain" image="phone.circle.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="callFriendButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="jva-BT-tbB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaE-61-PB0" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                <rect key="frame" x="261" y="416" width="100" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="pFN-Mk-6Mz"/>
-                                    <constraint firstAttribute="width" constant="100" id="rsB-1g-hgC"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="plain" image="circle.lefthalf.filled" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="halfQuestionButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="lNA-Ly-hmp"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 3 из 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aai-Ud-Wgd">
-                                <rect key="frame" x="24" y="60" width="366" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld9-ho-NZ7" customClass="MyButton" customModule="Let_me_ask" customModuleProvider="target">
-                                <rect key="frame" x="53" y="416" width="100" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="3gR-FF-MQS"/>
-                                    <constraint firstAttribute="height" constant="40" id="fbn-fn-6zD"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="plain" image="person.3.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="auditoryHelpButtonTapped:" destination="rgj-7K-WvT" eventType="touchUpInside" id="VGg-q1-t77"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zuu-DV-cIe"/>
                         <color key="backgroundColor" name="4"/>
                         <constraints>
-                            <constraint firstItem="aai-Ud-Wgd" firstAttribute="top" secondItem="zuu-DV-cIe" secondAttribute="top" constant="16" id="2VZ-N6-ILv"/>
+                            <constraint firstItem="INJ-Pa-Gfk" firstAttribute="leading" secondItem="zuu-DV-cIe" secondAttribute="leading" constant="32" id="3kj-R7-4k7"/>
+                            <constraint firstItem="zuu-DV-cIe" firstAttribute="bottom" secondItem="INJ-Pa-Gfk" secondAttribute="bottom" constant="32" id="6WH-m4-0pd"/>
                             <constraint firstItem="aai-Ud-Wgd" firstAttribute="leading" secondItem="zuu-DV-cIe" secondAttribute="leading" constant="24" id="7lQ-nM-FbX"/>
-                            <constraint firstItem="zuu-DV-cIe" firstAttribute="bottom" secondItem="bOf-SW-SSC" secondAttribute="bottom" constant="16" id="8n5-5Z-hwT"/>
-                            <constraint firstItem="m6z-4I-viv" firstAttribute="centerX" secondItem="xyl-Z4-GzL" secondAttribute="centerX" id="IZT-D2-vHQ"/>
-                            <constraint firstItem="FaE-61-PB0" firstAttribute="leading" secondItem="m6z-4I-viv" secondAttribute="trailing" constant="4" id="K5e-Ft-5te"/>
                             <constraint firstItem="zuu-DV-cIe" firstAttribute="trailing" secondItem="zqz-OL-0xn" secondAttribute="trailing" constant="8" id="NLs-dQ-qaH"/>
-                            <constraint firstItem="bOf-SW-SSC" firstAttribute="centerX" secondItem="xyl-Z4-GzL" secondAttribute="centerX" id="Qg9-L7-GI1"/>
+                            <constraint firstItem="INJ-Pa-Gfk" firstAttribute="top" secondItem="Jx6-SW-IWR" secondAttribute="bottom" constant="32" id="PVz-LT-TZr"/>
                             <constraint firstItem="zuu-DV-cIe" firstAttribute="trailing" secondItem="aai-Ud-Wgd" secondAttribute="trailing" constant="24" id="TuG-6E-bcc"/>
+                            <constraint firstItem="aai-Ud-Wgd" firstAttribute="top" secondItem="zuu-DV-cIe" secondAttribute="top" constant="16" id="V7t-bd-qoz"/>
+                            <constraint firstItem="zuu-DV-cIe" firstAttribute="trailing" secondItem="Jx6-SW-IWR" secondAttribute="trailing" constant="32" id="aYJ-4B-RdW"/>
                             <constraint firstItem="zqz-OL-0xn" firstAttribute="leading" secondItem="zuu-DV-cIe" secondAttribute="leading" constant="8" id="bat-Rz-eJI"/>
-                            <constraint firstItem="bOf-SW-SSC" firstAttribute="top" secondItem="m6z-4I-viv" secondAttribute="bottom" constant="40" id="ere-Tb-3Ql"/>
-                            <constraint firstItem="ld9-ho-NZ7" firstAttribute="centerY" secondItem="m6z-4I-viv" secondAttribute="centerY" id="ghK-iU-iQj"/>
+                            <constraint firstItem="zuu-DV-cIe" firstAttribute="trailing" secondItem="INJ-Pa-Gfk" secondAttribute="trailing" constant="32" id="gbs-bq-HnL"/>
+                            <constraint firstItem="INJ-Pa-Gfk" firstAttribute="height" secondItem="xyl-Z4-GzL" secondAttribute="height" multiplier="0.4" id="ieh-lz-dtQ"/>
                             <constraint firstItem="zqz-OL-0xn" firstAttribute="top" secondItem="aai-Ud-Wgd" secondAttribute="bottom" constant="16" id="nMo-x2-R1f"/>
-                            <constraint firstItem="FaE-61-PB0" firstAttribute="centerY" secondItem="m6z-4I-viv" secondAttribute="centerY" id="p7z-qX-lJp"/>
-                            <constraint firstItem="m6z-4I-viv" firstAttribute="leading" secondItem="ld9-ho-NZ7" secondAttribute="trailing" constant="4" id="pFJ-bV-nGn"/>
+                            <constraint firstItem="Jx6-SW-IWR" firstAttribute="leading" secondItem="zuu-DV-cIe" secondAttribute="leading" constant="32" id="xIW-dd-UMZ"/>
                         </constraints>
+                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                     </view>
                     <navigationItem key="navigationItem" id="ofd-kk-cma"/>
                     <connections>

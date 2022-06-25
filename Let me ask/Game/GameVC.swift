@@ -31,14 +31,14 @@ final class GameVC: UIViewController {
     
     var hintsFacade: HintsFacade?
     var sequenceQuestionStrategy: SequenceQuestionStrategy?
-    var selectQuestionsStategy: SelectQuestionsStrategy?
+    var selectQuestionsStrategy: SelectQuestionsStrategy?
     
     var buttons: [UIButton] = []
     var isDisableHalfButtons = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        allQuestion = selectQuestionsStategy!.giveMeQuestions()
+        allQuestion = selectQuestionsStrategy!.giveMeQuestions()
         buttons = [answer1Button, answer2Button, answer3Button, answer4Button]
         nextQuestion()
         beganGame()
@@ -107,6 +107,7 @@ final class GameVC: UIViewController {
             showAlert(isWin: true)
         }
     }
+    
     
     /// Отобразить вопрос
     /// - Parameter questionNumber: Индекс текущего вопроса в массиве вопросов
